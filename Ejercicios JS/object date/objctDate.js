@@ -50,5 +50,9 @@ console.log(fecha1 < fecha2);
 
 fecha.toLocaleString()
 
-
+var fecha = new Date();
+// Diferencia de minutos entre la hora local y UTC
+console.log(fecha.getTimezoneOffset()); 
+// Representación de la fecha y hora en formato UTC
+console.log(fecha.toUTCString()); 
 
