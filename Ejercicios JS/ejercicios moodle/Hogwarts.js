@@ -6,9 +6,12 @@ const hogwarts = (() => {
   const principal = () => {
     paso1();
     paso2();
+    paso6();
     paso3();
+    paso6();
     paso4();
-    console.log(estudiante);
+    paso5();
+    paso6();
   };
 
   const paso1 = () => {
@@ -23,9 +26,13 @@ const hogwarts = (() => {
     estudiante.edad = edad;
     estudiante.familia = familia;
     estudiante.linaje = linaje;
-    estudiante.cualidades = { cualidad1: "", cualidad2: "", cualidad3: "" };
-    estudiante.casa = "";
-    estudiante.animalPatronus = "";
+    estudiante.cualidades = {
+      cualidad1: "Vacia",
+      cualidad2: "Vacia",
+      cualidad3: "Vacia",
+    };
+    estudiante.casa = "Vacia";
+    estudiante.animalPatronus = "Vacia";
   };
 
   const paso2 = () => {
@@ -178,11 +185,88 @@ const hogwarts = (() => {
     } else alert("Tranquilo, no hay animales cerca");
 
     const enfrentarBoggart = (mensaje) => {
-      alert("Ahora no tienes miedo!");
+      boggartEjemplo.transformacion = "Ahora no tienes miedo a:" + mensaje;
+      alert(boggartEjemplo.transformacion);
     };
 
     const boggartEjemplo = { miedo: "A la oscuridad", vida: 100 };
     enfrentarBoggart(boggartEjemplo.miedo);
+  };
+
+  const paso5 = () => {
+    const asignarAnimal = () => {
+      const defensaContraLasArtesOscuras = [
+        { name: "Ciervo", description: "Elegante y noble", type: "Mamífero" },
+        {
+          name: "León",
+          description: "Valiente y majestuoso",
+          type: "Mamífero",
+        },
+        { name: "Lechuza", description: "Sabia y misteriosa", type: "Ave" },
+        {
+          name: "Fénix",
+          description: "Majestuoso y regenerativo",
+          type: "Mítico",
+        },
+        {
+          name: "Zorro Plateado",
+          description: "Astuto y ágil",
+          type: "Mamífero",
+        },
+        { name: "Delfín", description: "Amigable y juguetón", type: "Marino" },
+        { name: "Pantera", description: "Ágil y sigilosa", type: "Mamífero" },
+        { name: "Águila", description: "Aguda visión y libertad", type: "Ave" },
+        { name: "Lobo", description: "Fiel y territorial", type: "Mamífero" },
+        { name: "Dragón", description: "Poderoso y mágico", type: "Mítico" },
+      ];
+
+      const animal = Math.floor(Math.random() * 9);
+      estudiante.animalPatronus = defensaContraLasArtesOscuras[animal].name;
+
+      alert("Genial!, se te ha asignado: " + estudiante.animalPatronus);
+    };
+    asignarAnimal();
+    const defenderse = () => {
+      alert("Sacar mi patronus " + estudiante.animalPatronus);
+    };
+    const opcion = prompt(
+      "Te estan atacando, deseas defenderte? (Si-No)"
+    ).toLowerCase();
+    if (opcion === "si") {
+      defenderse();
+    } else if (opcion === "no") {
+      alert("Entonces corre!");
+    } else {
+      alert("Esta opcion no existe");
+    }
+  };
+
+  const paso6 = () => {
+    const mostrarEstudiante = () => {
+      alert(`
+    HASTA AHORA LLEVAS ESTOS DATOS:
+    Nombre: ${estudiante.nombre}
+    Edad: ${estudiante.edad}
+    Familia: ${estudiante.familia} 
+    Linaje: ${estudiante.linaje} 
+    Cualidades: ${estudiante.cualidades.cualidad1} - ${estudiante.cualidades.cualidad2} - ${estudiante.cualidades.cualidad3}
+    Casa: ${estudiante.casa}
+    Animal: ${estudiante.animalPatronus}
+    `);
+    };
+    mostrarEstudiante();
+    const mostrarClases = () => {
+      for (let i = 0; i < clases.length; i++) {
+        if (clases[i].horario != undefined) {
+          alert(`
+          Clase vista: ${clases[i].nombre}
+          Horario: ${clases[i].horario} 
+          Propiedad: ${clases[i].propiedad}
+          `);
+        }
+      }
+    };
+    mostrarClases();
   };
 
   return {
