@@ -169,13 +169,20 @@ const hogwarts = (() => {
     }
 
     const paso2 = () => {
-        return Math.floor(Math.random()*(2)+1);
+      return Math.floor(Math.random() * 2 + 1);
     };
-    
-    const animal= paso2();
-    if (animal===1) {
-        alert("Hay un animal!");
-    }else alert("Tranquilo, no hay animales cerca");
+
+    const animal = paso2();
+    if (animal === 1) {
+      alert("Hay un animal!");
+    } else alert("Tranquilo, no hay animales cerca");
+
+    const enfrentarBoggart = (mensaje) => {
+      alert("Ahora no tienes miedo!");
+    };
+
+    const boggartEjemplo = { miedo: "A la oscuridad", vida: 100 };
+    enfrentarBoggart(boggartEjemplo.miedo);
   };
 
   return {
