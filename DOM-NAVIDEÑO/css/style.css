@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik Bubbles", "Segoe UI";
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#a2000a, #cf0000);
+}
+
+.contenedor {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.contenedor::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: url(../assets/img/tree.png);
+  width: calc(2000px * 1000);
+  /* width: 100%; */
+  height: 250px;
+  z-index: 1;
+  background-repeat: repeat;
+
+  animation: animacionArbol 100s linear infinite;
+  -webkit-animation: animacionArbol 100s linear infinite;
+}
+
+.contenedor .nieve {
+  display: flex;
+  position: relative;
+}
+
+.contenedor .nieve span {
+  position: relative;
+  min-width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 1vw;
+  box-shadow: -100px 20px 5px #fff, 100px 20px 10px #fff;
+  animation: animacionNieve 25s linear infinite;
+  animation-duration: calc(75s / var(--i));
+  z-index: -1;
+}
+/* even es pares */
+.contenedor .nieve span:nth-child(even) {
+  min-width: 10px;
+  height: 10px;
+}
+
+.contenedor .circulo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  /*  Para asegurarnos que se centre se usa transform, ya que los absolutos tienen un margen  */
+  transform: translateX(-50%);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.contenedor .circulo::before {
+  content: "";
+  position: absolute;
+  background: url(../assets/img/santa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 650px;
+  inset: -200px;
+  z-index: 2;
+  animation: animacionSanta 5s ease-in-out infinite;
+}
+
+.contenedor .contenedor-timer {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-size: 52px;
+  color: #000;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 40%;
+  z-index: 4;
+  text-shadow: 2px 2px 2px #ff3c3c;
+}
+
+@keyframes animacionSanta {
+  0% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(25px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+}
+
+@keyframes animacionArbol {
+  0% {
+    -webkit-animation: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-animation: translateX(calc(-2000px * 7));
+    transform: translateX(calc(-2000px * 7));
+  }
+}
+
+@keyframes animacionNieve {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
