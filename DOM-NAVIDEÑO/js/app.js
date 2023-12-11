@@ -12,3 +12,5 @@ const random = (inicial, final) =>
   Math.floor(Math.random() * (final - inicial) + inicial);
 
 generarNieve();
+
+ssss;
