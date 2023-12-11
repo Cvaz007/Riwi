@@ -13,6 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(#a2000a, #cf0000);
+  cursor: url(../assets/img/arbol-de-navidad.png), default;
 }
 
 .contenedor {
@@ -91,16 +92,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* este contenedor no es responsive */
 .timer {
   font-size: 52px;
-  color: #000;
+  color: #fff;
   letter-spacing: 2px;
   font-weight: bold;
   position: relative;
-  margin-top: 40%;
+  margin-top: 50%;
   z-index: 4;
-  text-shadow: 2px 2px 2px #ff3c3c;
+  text-shadow: 7px 5px 7px #000;
+  display: flex;
+  gap: 30px;
+}
+
+.timer .item p {
+  text-align: center;
+}
+
+.timer .item .item-text {
+  font-size: 14px;
 }
 
 @keyframes animacionSanta {
