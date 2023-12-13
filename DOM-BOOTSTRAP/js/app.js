@@ -7,6 +7,7 @@ const cantidadProducto = document.querySelector("#cantidad_producto");
 const precioProducto = document.querySelector("#precio_producto");
 const imagenProducto = document.querySelector("#imagen_producto");
 const categoriaProducto = document.querySelector("#categoria_producto");
+
 const inputs = document.querySelectorAll(".inpt");
 //BUTTONS
 const btnAgregar = document.querySelector("#btn_agregar");
@@ -17,11 +18,21 @@ btnAgregar.addEventListener("click", (event) => {
     event.preventDefault();
     agregarProducto();
     console.log(listaProductos);
-    inputs.forEach((input)=>input.value ="");
+    /*Esta es otra manera de resetirar los inputs
+    inputs.forEach((input)=>input.value =""); */
+});
+
+tbody.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains("delete-product")) {
+        const id = event.target.getAttribute("data-id");
+
+        if (id) eliminarProducto(id);
+    }
 });
 
 //Lista de productos
-const listaProductos = [
+let listaProductos = [
     {
         id: crypto.randomUUID(),
         nombre: "Pastas",
@@ -42,14 +53,15 @@ const mostrarProductos = () => {
             style: "currency",
             currency: "USD",
         });
+        const imgDefault = "https://cdn-icons-png.flaticon.com/512/2771/2771406.png";
         tbody.innerHTML += `
     <tr>
         <td>${indice + 1}</td>
         <td>
             <img 
-                src="${imagen}" 
+                src="${imagen || imgDefault}" 
                 alt="Img producto"
-                class="rounded-circule"
+                class="rounded-circle"
                 width="50px"
                 height="50px"
             />
@@ -61,7 +73,7 @@ const mostrarProductos = () => {
 
         <td>
             <button class="btn btn-primary edit-product" data-id="${id}">Editar</button>
-            <button class="btn btn-danger delete-product data-id="${id}"">Eliminar</button>
+            <button class="btn btn-danger delete-product" data-id="${id}">Eliminar</button>
         </td>
     </tr>
     `;
@@ -97,10 +109,18 @@ const agregarProducto = () => {
     alerta.classList = "alert alert-success";
     alerta.textContent = "Producto agregado correctamente";
     setTimeout(() => {
-      alerta.classList.add("d-none")
-    },2500);
-    
+        alerta.classList.add("d-none")
+    }, 2500);
+
+    /* para resetirar un formulario se hace: */
+    document.querySelector("#form_productos").reset();
+
     mostrarProductos()
+};
+
+const eliminarProducto = (id) => {
+    listaProductos = listaProductos.filter((producto) => producto.id != id);
+    mostrarProductos();
 };
 
 mostrarProductos();
