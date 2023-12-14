@@ -9,10 +9,10 @@ export const paso4 = (clases) => {
 
     const completarClases = (clase) => {
       const propiedad = prompt(
-        `Ingresa una propiedad de la clase ${clases[clase].nombre}`
+        `Ingresa una propiedad de la clase ${clases[clase].propiedad}`
       );
       const horario = prompt(
-        `Ingresa el horario de la clase ${clases[clase].nombre}`
+        `Ingresa el horario de la clase ${clases[clase].horario}`
       );
       clases[clase].horario = horario;
       clases[clase].propiedad = propiedad;
