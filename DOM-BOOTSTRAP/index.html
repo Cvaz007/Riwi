@@ -40,7 +40,6 @@
               <li class="nav-item">
                 <a
                   class="nav-link active text-white"
-                  
                   aria-current="page"
                   href="#"
                   >Home</a
@@ -96,8 +95,21 @@
         <div class="col-12 my-4">
           <div class="container-fluid d-flex justify-content-end">
             <button
+              class="btn btn-success opacity-0 pe-none"
+              type="button"
+              id="btnOpenDrawerEdit"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              Agregar producto
+            </button>
+
+            <button
               class="btn btn-success"
               type="button"
+              id="btnOpenDrawerInsert"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar"
@@ -113,6 +125,7 @@
             >
               <div class="offcanvas-header">
                 <i
+                  id="icono"
                   class="bx bx-cart-add text-white"
                   style="
                     padding-left: 12px;
