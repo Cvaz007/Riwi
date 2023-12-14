@@ -3,6 +3,8 @@
  * @returns {Object <estudiante>} Retorna el estudiante
  */
 export const paso1 = () => {
+    //selector
+    const form = document.querySelector("#form");
     alert("Bienvenido a hogwarts, te pediremos algunos datos!");
     const nombre = prompt("Ingresa tu nombre: ");
     const edad = parseInt(prompt("Ingresa tu edad: "));
