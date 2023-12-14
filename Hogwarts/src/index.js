@@ -6,7 +6,7 @@ import {
     paso5,
     paso6,
     paso7,
-    renderPaso1,
+    renderHome,
 } from "./usecases";
 
 //Declaracion de variables globales
@@ -31,6 +31,5 @@ clases= paso7(clases); */
 //listener
 const play = document.querySelector("#play");
 
-play.addEventListener("click",() => {
-  renderPaso1();
-});
+
+renderHome();
