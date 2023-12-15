@@ -1,0 +1,47 @@
+.video-1{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100%-100vw)/2));
+    z-index: -2;
+}
+
+.titulo{
+    color: #ffffff;
+    text-shadow: 0 0 15px #000000; 
+    font-size: 45px;
+                                         
+}
+
+.primer{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    height: 100vh;
+}
+
+.vd{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .27;
+
+}
+
+.jugar{
+    font-family: 'Harry Potter', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 15px #000000; 
+    font-size: 45px;
+    
+}
+
+.this{
+    display: flex;
+    align-items: center;
+}

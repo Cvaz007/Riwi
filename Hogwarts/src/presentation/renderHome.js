@@ -1,7 +1,10 @@
+import { generarNieve, checkMonth } from "../usecases/index";
 
 export const renderHome = () => {
-    const main = document.querySelector("#main");
-    main.innerHTML=`<div>
+  const main = document.querySelector("#main");
+  main.innerHTML = `
+  <div class="nieve"></div>
+  <div>
     <video
       class="video-1"
       src="./public/assets/video/video2.mp4"
@@ -24,4 +27,9 @@ export const renderHome = () => {
       </div>
     </div>
   </div>`;
+  if (!checkMonth()) {
+    container.classList.replace("chrismas", "normal");
+} else {
+    generarNieve();
+}
 };

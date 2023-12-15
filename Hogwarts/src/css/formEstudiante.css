@@ -1,0 +1,61 @@
+#container {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#form {
+    border: 1px black solid;
+    border-radius: 20px;
+    width: 30%;
+    background: #bcbcbcb3;
+}
+
+.chrismas {
+    background: url("../../public/assets/imgs/bg-christmas.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.normal {
+
+    background: url("../../public/assets/imgs/bg-normal.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Generar nieve */
+.nieve {
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+.nieve span {
+    position: relative;
+    min-width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 1vw;
+    box-shadow: -100px 20px 5px #fff, 100px 20px 10px #fff;
+    animation: animacionNieve 25s linear infinite;
+    animation-duration: calc(75s / var(--i));
+
+}
+
+.nieve span:nth-child(even) {
+    min-width: 10px;
+    height: 10px;
+}
+
+@keyframes animacionNieve {
+    0% {
+        transform: translateY(-10vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}

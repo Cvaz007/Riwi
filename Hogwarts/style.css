@@ -2,54 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url(https://cdn.custom-cursor.com/db/6026/32/harry-potter-alastor-moody-and-wand-cursor.png) , default !important
-}
-
-.video-1{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(calc((100%-100vw)/2));
-    z-index: -2;
-}
-
-.titulo{
+    cursor: url(https://cdn.custom-cursor.com/db/6026/32/harry-potter-alastor-moody-and-wand-cursor.png) , default !important;
     font-family: 'Harry Potter', sans-serif;
-    color: #ffffff;
-    text-shadow: 0 0 15px #000000; 
-    font-size: 45px;
-                                         
+}
+body{
+    overflow: hidden;
 }
 
-.primer{
-    display: flex;
-    align-items: center;   
-    justify-content: center;
-    height: 100vh;
-}
-
-.vd{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #000;
-    opacity: .27;
-
-}
-
-.jugar{
-    font-family: 'Harry Potter', sans-serif;
-    color: #ffffff;
-    text-shadow: 0 0 15px #000000; 
-    font-size: 45px;
-    
-}
-
-.this{
-    display: flex;
-    align-items: center;
-}

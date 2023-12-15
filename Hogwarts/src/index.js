@@ -7,7 +7,17 @@ import {
     paso6,
     paso7,
     renderHome,
+    renderFormsEstudiante,
 } from "./usecases";
+
+renderHome();
+
+//SELECTORES
+const btnPlay = document.querySelector("#play");
+
+
+//Eventos (Listeners)
+btnPlay.addEventListener("click",renderFormsEstudiante);
 
 //Declaracion de variables globales
 /* let clases = paso2();
@@ -27,9 +37,3 @@ estudiante.animalPatronus = paso5();
 paso6(estudiante,clases);
 
 clases= paso7(clases); */
-
-//listener
-const play = document.querySelector("#play");
-
-
-renderHome();

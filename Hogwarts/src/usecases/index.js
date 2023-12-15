@@ -7,3 +7,6 @@ export {paso6} from "./paso6";
 export {paso4_1} from "./paso4_1";
 export {paso7} from "./paso7";
 export {renderHome} from "../presentation/renderHome";
+export {renderFormsEstudiante} from "../presentation/renderFormEstudiante";
+export {generarNieve} from "./nevar";
+export {checkMonth} from "./checkMonth";
