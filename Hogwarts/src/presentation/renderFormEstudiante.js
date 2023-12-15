@@ -75,7 +75,6 @@ export const renderFormsEstudiante = () => {
 
 const changeImage = () => {
     const container = document.querySelector("#container")
-
     if (!checkMonth()) {
         container.classList.replace("chrismas", "normal");
     } else {
