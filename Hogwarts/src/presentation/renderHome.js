@@ -28,7 +28,7 @@ export const renderHome = () => {
     </div>
   </div>`;
   if (!checkMonth()) {
-    container.classList.replace("chrismas", "normal");
+    main.classList.replace("chrismas", "normal");
 } else {
     generarNieve();
 }
