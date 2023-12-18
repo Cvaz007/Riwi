@@ -9,7 +9,7 @@ import {
     renderHome,
     renderFormsEstudiante,
 } from "./usecases";
-
+let estudiante;
 renderHome();
 
 //SELECTORES
@@ -17,8 +17,8 @@ const btnPlay = document.querySelector("#play");
 
 
 //Eventos (Listeners)
-btnPlay.addEventListener("click",renderFormsEstudiante);
-
+btnPlay.addEventListener("click", estudiante = renderFormsEstudiante);
+console.log(estudiante.then((res) => console.log(res)));
 //Declaracion de variables globales
 /* let clases = paso2();
 let estudiante = paso1();

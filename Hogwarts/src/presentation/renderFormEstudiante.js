@@ -1,6 +1,6 @@
 import{generarNieve,checkMonth, paso1} from "../usecases/index";
 
-export const renderFormsEstudiante = () => {
+export const renderFormsEstudiante = async () => {
     const main = document.querySelector("#main");
     main.innerHTML = `
     
@@ -71,7 +71,10 @@ export const renderFormsEstudiante = () => {
     </div>`;
 
     changeImage()
-    paso1();
+    const a = paso1();
+    console.log(a.then(r => {console.log(r);}));
+    return a;
+    
 };
 
 //Listeners
