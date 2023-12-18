@@ -1,163 +1,212 @@
-//Selectores
+// Selectores
 const tbody = document.querySelector("#tbody");
 const alerta = document.querySelector("#alerta");
-const drawer = document.querySelector("#btnOpenDrawerEdit");
-const nuevoProducto = document.querySelector("#offcanvasNavbarLabel");
-const icono = document.querySelector("#icono");
+const tituloDrawer = document.querySelector("#offcanvasNavbarLabel");
 
-//INPUTS
+
+/**Selectores de los inputs (entradas) */
 const nombreProducto = document.querySelector("#nombre_producto");
 const cantidadProducto = document.querySelector("#cantidad_producto");
 const precioProducto = document.querySelector("#precio_producto");
-const imagenProducto = document.querySelector("#imagen_producto");
 const categoriaProducto = document.querySelector("#categoria_producto");
-
-const inputs = document.querySelectorAll(".inpt");
-
-//BUTTONS
+const imagenProducto = document.querySelector("#imagen_producto");
+/** Botones*/
 const btnAgregar = document.querySelector("#btn_agregar");
+let productCache;
+/**Eventos */
 
-//Variables
-let productoCache;
-//Eventos
-btnAgregar.addEventListener("click", (event) => {
+//Cuando el usuario haga clic dentro del botón btnAgregar
+//Se ejecutará una función
+btnAgregar.addEventListener("click", function (event) {
     //Quito los eventos por defecto
     event.preventDefault();
+    //Si el usuario dio click se ejecuta esta función
     agregarProducto();
-    console.log(listaProductos);
-    /*Esta es otra manera de resetirar los inputs
-    inputs.forEach((input)=>input.value =""); */
-});
+})
 
+//Escuchar cuando el usuario de clic en el cuerpo de la tabla
 tbody.addEventListener("click", (event) => {
 
+    /**Si a la etiqueta en la que se ejecutó el evento contiene la clase delete-product - entonces */
     if (event.target.classList.contains("delete-product")) {
-        const id = event.target.getAttribute("data-id");
-
+        /**Obtener el id del producto */
+        const id = event.target.getAttribute("data-id")
         if (id) eliminarProducto(id);
-        return;
+        //Para que no siga la función
+        return
     }
 
+    /**Si la etiqueta contiene la clase edit-product quiere decir que estamos editando */
     if (event.target.classList.contains("edit-product")) {
-        const id = event.target.getAttribute("data-id");
-        if (id) cargarInformacion(id);
-
+        console.log("Editandoooo")
+        /**Obtener el id del producto */
+        const id = event.target.getAttribute("data-id")
+        /**Si existe un id invoco la funcion */
+        if (id) cargarInformacion(id)
     }
+
+
 });
 
 //Lista de productos
 let listaProductos = [
     {
-        id: crypto.randomUUID(),
+        id: Date.now(),
         nombre: "Pastas",
         precio: 5.0,
         cantidad: 10,
-        imagen:
-            "https://media.istockphoto.com/id/1144823591/photo/spaghetti-in-a-dish-on-a-white-background.jpg?s=612x612&w=0&k=20&c=SeEWmJfPQlX1zVUHPKjL-cgYeMs9cZ97-kdZMm7feA4=",
-        categoria: "Carbohidratos",
-    },
+        imagen: "https://cdn.colombia.com/sdi/2019/03/05/recetas-con-pasta-716227.jpg",
+        categoria: "Carbohidrato"
+    }
 ];
 
-const mostrarProductos = () => {
-    //limpiar tabla
+function mostrarProductos() {
+    //Limpiar tabla 
     tbody.innerHTML = "";
-    listaProductos.forEach((producto, indice) => {
+
+
+    /**Recorro mi lista de objetos con foreach */
+    /**Donde producto es el item que se está recorriendo en el momento */
+    /**Y index el indice correspondiente al item del momento */
+    listaProductos.forEach(function (producto, indice) {
+        /**Desestructuramos el objeto (producto) */
         const { cantidad, categoria, id, imagen, nombre, precio } = producto;
+
         const precioFormat = Number(precio).toLocaleString("en-US", {
             style: "currency",
-            currency: "USD",
+            currency: "USD"
         });
-        const imgDefault = "https://cdn-icons-png.flaticon.com/512/2771/2771406.png";
+
+        const imgDefault = "https://img.freepik.com/vector-premium/concepto-menu-diseno-icono-comida-grafico-vector-ilustracion-10-eps_24911-20357.jpg?w=2000"
+
         tbody.innerHTML += `
-    <tr>
-        <td>${indice + 1}</td>
-        <td>
-            <img 
-                src="${imagen || imgDefault}" 
-                alt="Img producto"
-                class="rounded-circle"
-                width="50px"
-                height="50px"
-            />
-        </td>
-        <td>${nombre}</td>
-        <td>${precioFormat}</td>
-        <td>${categoria}</td>
-        <td>${cantidad}</td>
+            <tr>
+                <td>${indice + 1}</td>
+                <td> 
+                    <img 
+                        src="${imagen || imgDefault}" 
+                        alt="img producto"
+                        class="rounded-circle"
+                        width="50px"
+                        height="50px"
+                    />
+                </td>
 
-        <td>
-            <button class="btn btn-primary edit-product" data-id="${id}">Editar</button>
-            <button class="btn btn-danger delete-product" data-id="${id}">Eliminar</button>
-        </td>
-    </tr>
-    `;
-    });
-};
+                <td>${nombre}</td>
+                <td>${precioFormat}</td>
+                <td>${categoria}</td>
+                <td>${cantidad}</td>
 
-const agregarProducto = () => {
+                <td>
+                    <button class="btn btn-primary edit-product" data-id="${id}">
+                        Editar
+                    </button>
+
+                    <button class="btn btn-danger delete-product" data-id="${id}">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        `;
+
+    })
+}
+
+/**Está función se encarga de agregar 
+ * y modificar un producto */
+function agregarProducto() {
+
     /**Le adicionamos clases a nuestra alerta (d-none para no se visible) */
     alerta.classList = "alert alert-danger d-none";
-    if (!productoCache) {
-        /**Validar  */
-        if ([nombreProducto.value,
-        cantidadProducto.value,
-        categoriaProducto.value,
-        precioProducto.value,
-        ].includes("")) {
-            /**Si algun campo está vacío */
-            alerta.textContent = "Todos los campos son obligatorios.";
-            alerta.classList.remove("d-none");
-            return;
-        }
-        const nuevoProducto = {
-            id: crypto.randomUUID(),
-            nombre: nombreProducto.value,
-            cantidad: cantidadProducto.value,
-            imagen: imagenProducto.value,
-            categoria: categoriaProducto.value,
-            precio: precioProducto.value
-        };
-        listaProductos.push(nuevoProducto);
+    /**Validar  */
 
-        //Mensaje de exito
-        alerta.classList = "alert alert-success";
-        alerta.textContent = "Producto agregado correctamente";
-        setTimeout(() => {
-            alerta.classList.add("d-none")
-        }, 2500);
-    }else {
-        
+    if ([nombreProducto.value,
+    cantidadProducto.value,
+    categoriaProducto.value,
+    precioProducto.value,
+    ].includes("")) {
+        /**Si algun campo está vacío */
+        alerta.textContent = "Todos los campos son obligatorios.";
+        alerta.classList.remove("d-none");
+        return
     }
 
+    /**Si existe un producto en cache  agrega*/
+    if (!productCache) {
+        /**Creo un nuevo objeto literal */
+        const nuevoProducto = {
+            nombre: nombreProducto.value,
+            cantidad: cantidadProducto.value,
+            categoria: categoriaProducto.value,
+            precio: precioProducto.value,
+            imagen: imagenProducto.value,
+            id: Date.now()
+        }
+        /**Agrego al final de la lista el nuevo producto */
+        listaProductos.push(nuevoProducto);
 
-    /* para resetirar un formulario se hace: */
+    } else {
+        //De lo contrario actualizo el objeto que esta apuntando
+        //al mismo espacio de memoria que se quiere actualizar
+        productCache.nombre = nombreProducto.value;
+        productCache.cantidad = cantidadProducto.value;
+        productCache.precio = precioProducto.value;
+        productCache.categoria = cantidadProducto.value;
+        productCache.imagen = imagenProducto.value;
+
+        productCache = undefined;
+
+    }
+    /**  Mostrar alerta de éxito*/
+    alerta.classList = "alert alert-success"
+    alerta.textContent = "Producto agregado correctamente."
+
+    /**Escondo la alerta despues de 3 segundos */
+    setTimeout(() => {
+        alerta.classList.add("d-none");
+    }, 3000);
+
+    /**Reseteamos el formulario */
     document.querySelector("#form_productos").reset();
 
-    mostrarProductos()
-};
-
-const eliminarProducto = (id) => {
-    listaProductos = listaProductos.filter((producto) => producto.id != id);
+    /**Mostramos de nuevo los productos */
     mostrarProductos();
-};
 
-const cargarInformacion = (id) => {
-    productoCache = listaProductos.find((product) => product.id == id);
+}
 
-    console.log(productoCache);
+function eliminarProducto(id) {
+    /**Filtro todos los productos */
+    listaProductos = listaProductos.filter(producto => producto.id != id);
 
-    nombreProducto.value = productoCache.nombre
-    cantidadProducto.value = productoCache.cantidad;
-    precioProducto.value = productoCache.precio;
-    imagenProducto.value = productoCache.imagen;
-    categoriaProducto.value = productoCache.categoria;
+    mostrarProductos();
+}
 
-    icono.classList.replace("bx-cart-add", "bxs-edit");
-    btnAgregar.innerText = "Actualizar producto";
-    nuevoProducto.innerText = "Editar producto"
+/**Esta funcion se encarga de mostrar los valores en el drawer */
+function cargarInformacion(id) {
+
+    /**Busco el producto que contenga ese id */
+    productCache = listaProductos.find((product) => product.id == id);
+
+    console.log(productCache)
+
+    /**Asignar el valora a cada input */
+    nombreProducto.value = productCache.nombre;
+    cantidadProducto.value = productCache.cantidad;
+    precioProducto.value = productCache.precio;
+    categoriaProducto.value = productCache.categoria;
+    imagenProducto.value = productCache.imagen;
+
+
+    /**Selecciono el botón de editar desde el HTML */
+    const drawer = document.querySelector("#btnOpenDrawerEdit");
+
+    /**Obligo a hacer un clic al botón de abrir el drawer de editar */
     drawer.click();
-};
 
-mostrarProductos();
+    tituloDrawer.textContent = "Actualizar producto";
+    btnAgregar.textContent = "Actualizar";
+
+}
 
 
+mostrarProductos()
