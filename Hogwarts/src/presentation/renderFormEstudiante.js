@@ -1,4 +1,4 @@
-import{generarNieve,checkMonth} from "../usecases/index";
+import{generarNieve,checkMonth, paso1} from "../usecases/index";
 
 export const renderFormsEstudiante = () => {
     const main = document.querySelector("#main");
@@ -71,7 +71,11 @@ export const renderFormsEstudiante = () => {
     </div>`;
 
     changeImage()
+    paso1();
 };
+
+//Listeners
+
 
 const changeImage = () => {
     const container = document.querySelector("#container")
