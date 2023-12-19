@@ -94,7 +94,7 @@ const selectItem = (event) => {
   event.preventDefault();
   const id = (event.target.getAttribute("data-id"))-1;
   const item = carrito.filter((i) => i.id === id);
-
+console.log(id)
   if(item.length !== 0){
     plusItem(item);
   }else{

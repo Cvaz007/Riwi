@@ -1,5 +1,7 @@
 const table = document.querySelectorAll(".agregar-carrito");
 const carBody = document.querySelector(".tbody");
+const empty = document.querySelector("#vaciar-carrito");
+const deleteItemBtn = document.querySelector("#carrito");
 
 const items = [
   {
@@ -97,35 +99,65 @@ const selectItem = (event) => {
 
   if (item.length !== 0) {
     plusItem(item);
+    deleteCarrito(false);
+    renderCarrito();
   } else {
     addItem(id);
+    deleteCarrito(false);
+    renderCarrito();
   }
-  renderCarrito();
 };
 
 const renderCarrito = () => {
-  const trHTML = document.createElement("tr");
   carrito.forEach((item) => {
+    const trHTML = document.createElement("tr");
+    trHTML.classList.add(`trId`);
     const containerImg = document.createElement("td");
     const precio = document.createElement("td");
     const nombre = document.createElement("td");
     const cantidad = document.createElement("td");
     const img = document.createElement("img");
+    const btn = document.createElement("button");
 
     img.src = `${item.img}`;
-    /* img.setAttribute("width:100px"); */
+    img.setAttribute("width", "100px");
+    cantidad.classList.add(`id${item.id}`);
+    btn.classList.add("btnDelete");
+    btn.setAttribute("data-id", `${item.id}`);
 
     nombre.textContent = `${item.nombre}`;
     precio.textContent = `${item.precio}`;
     cantidad.textContent = `${item.cantidad}`;
+    btn.innerText = "Eliminar";
 
     containerImg.appendChild(img);
     trHTML.appendChild(img);
     trHTML.appendChild(nombre);
     trHTML.appendChild(precio);
     trHTML.appendChild(cantidad);
+    trHTML.appendChild(btn);
+
+    carBody.appendChild(trHTML);
   });
-  carBody.appendChild(trHTML);
+  document.querySelectorAll("#btnDelete");
+};
+
+const deleteCarrito = (bandera) => {
+  if (bandera) {
+    carrito = [];
+    renderCarrito();
+  }
+  const hijos = document.querySelectorAll(`.trId`);
+  hijos.forEach((hijo) => carBody.removeChild(hijo));
+};
+
+const deleteItem = (event) => {
+  const id = event.target.getAttribute("data-id");
+
+  carrito = carrito.filter((item) => item.id != id);
+  deleteCarrito(false);
+  renderCarrito();
+
 };
 
 const addItem = (id) => {
@@ -136,7 +168,12 @@ const plusItem = (item) => {
   item[0].cantidad += 1;
 };
 
-const select = () => {
+const main = () => {
   table.forEach((item) => item.addEventListener("click", selectItem));
+  empty.addEventListener("click", () => deleteCarrito(true));
+  deleteItemBtn.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btnDelete")) deleteItem(event);
+  });
 };
-select();
+
+main();
