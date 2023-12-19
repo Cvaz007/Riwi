@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nombre": "Sebastian",
+      "edad": 20,
+      "familia": "Moreno",
+      "linaje": "Mestizo",
+      "cualidades": {
+        "cualidad1": "lindo",
+        "cualidad2": "Inteligente",
+        "cualidad3": "Hola"
+      },
+      "casa": "Griffindor",
+      "animalPatronus": "Delfin",
+      "clases": {
+        "profesor": "Juan",
+        "nombre": "Hechizos",
+        "horario": "10-2",
+        "propiedad": "Interesante"
+      }
+    }
+  ]
+}
