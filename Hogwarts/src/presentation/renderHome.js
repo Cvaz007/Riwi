@@ -1,8 +1,7 @@
 import { generarNieve, checkMonth } from "../usecases/index";
 
-export const renderHome = () => {
-  const main = document.querySelector("#main");
-  main.innerHTML = `
+export const renderHome = (element) => {
+  element.innerHTML = `
   <div class="nieve"></div>
   <div>
     <video

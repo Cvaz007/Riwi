@@ -1,9 +1,10 @@
-import{generarNieve,checkMonth, paso1} from "../usecases/index";
-
-export const renderFormsEstudiante = async () => {
-    const main = document.querySelector("#main");
-    main.innerHTML = `
-    
+import{generarNieve,checkMonth} from "../usecases/index";
+import {getUSerById} from "../usecases/peticiones/get-user-by-id"
+export const renderFormsEstudiante = async (element,callback) => {
+  const btnPlay = document.querySelector("#play");
+  btnPlay.addEventListener("click",(event) => {
+    event.preventDefault();
+    element.innerHTML = `
     <div
       id="container"
       class="d-flex align-items-center justify-content-center chrismas"
@@ -69,17 +70,25 @@ export const renderFormsEstudiante = async () => {
         />
       </div>
     </div>`;
-
-    changeImage()
-    const a = paso1();
-    console.log(a.then(r => {console.log(r);}));
-    return a;
+  });
+    const form = document.querySelector("#form");
     
+    const loadedUser= await getUSerById(0);
+    form?.addEventListener("submit",async (event) => {
+      event.preventDefault();
+      const formData = new FormData();
+      
+      const userLike = { ...loadedUser };
+      for (const [key,value] of formData) {
+        userLike[key]=value;
+      }
+      console.log(userLike);
+      await callback(userLike);
+    })
+    changeImage();    
 };
 
 //Listeners
-
-
 const changeImage = () => {
     const container = document.querySelector("#container")
     if (!checkMonth()) {
@@ -88,3 +97,4 @@ const changeImage = () => {
         generarNieve();
     }
 }
+

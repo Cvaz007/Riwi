@@ -6,15 +6,15 @@ import { User } from "../models/user";
  */
 export const userModelToLocalhost = (user) => {
   const {
-    id,
+    id=0,
     nombre,
     edad,
     familia,
     linaje,
-    cualidades,
-    casa,
-    animalPatronus,
-    clases,
+    cualidades={},
+    casa="",
+    animalPatronus="",
+    clases={},
   } = user;
 
   return {

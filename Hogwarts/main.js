@@ -1,3 +1,5 @@
 import './style.css'
-import "./src/index";
+import { indexApp } from './src/app';
 
+const main = document.querySelector("#main");
+indexApp(main);

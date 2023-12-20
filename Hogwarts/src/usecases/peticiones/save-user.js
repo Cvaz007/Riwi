@@ -1,12 +1,12 @@
-import { localhostUserToModel } from "../mappers/localhost-user.mapper";
-import { userModelToLocalhost } from "../mappers/user-tolocalhost.mapper";
-import { User } from "../models/user";
+import { localhostUserToModel } from "../../mappers/localhost-user.mapper";
+import { userModelToLocalhost } from "../../mappers/user-tolocalhost.mapper";
+import { User } from "../../models/user";
 
 /**
  *
  * @param {Like<User>} userLike
  */
-export const saveUSer = async (userLike) => {
+export const saveUser = async (userLike) => {
   const user = new User(userLike);
   const userToSave = userModelToLocalhost(user);
   let userUpdated;
@@ -24,23 +24,23 @@ export const saveUSer = async (userLike) => {
  * @param {Like<User>} user
  */
 const createUser = async (user) => {
-    const url = `${import.meta.env.VITE_BASE_URL}/users`;
-    const res = await fetch(url, {
-        method:"POST",
-        body:JSON.stringify(user),
-        headers:{"Content-Type":"application/json"},
-    });
-    const newUser = await res.json();
-    return newUser;
-}
+  const url = `${import.meta.env.VITE_BASE_URL}/users`;
+  const res = await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(user),
+    headers: { "Content-Type": "application/json" },
+  });
+  const newUser = await res.json();
+  return newUser;
+};
 
 const updateUser = async (user) => {
-    const url = `${import.meta.env.VITE_BASE_URL}/users/${user.id}`;
-    const res = await fetch(url, {
-      method: "PATCH",
-      body: JSON.stringify(user),
-      headers: { "Content-Type": "application/json" },
-    });
-    const updatedUser = await res.json();
-    return updatedUser;
-  };
+  const url = `${import.meta.env.VITE_BASE_URL}/users/${user.id}`;
+  const res = await fetch(url, {
+    method: "PATCH",
+    body: JSON.stringify(user),
+    headers: { "Content-Type": "application/json" },
+  });
+  const updatedUser = await res.json();
+  return updatedUser;
+};
