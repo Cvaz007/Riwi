@@ -31,6 +31,7 @@ const createUser = async (user) => {
     headers: { "Content-Type": "application/json" },
   });
   const newUser = await res.json();
+  console.log(newUser);
   return newUser;
 };
 

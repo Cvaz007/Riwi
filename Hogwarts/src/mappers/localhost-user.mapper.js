@@ -7,10 +7,10 @@ import { User } from "../models/user";
 export const localhostUserToModel = (localhostUser) => {
   const {
     id=0,
-    nombre,
-    edad,
-    familia,
-    linaje,
+    nombre="",
+    edad="",
+    familia="",
+    linaje="",
     cualidades={},
     casa="",
     animalPatronus="",

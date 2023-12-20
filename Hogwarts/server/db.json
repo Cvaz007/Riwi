@@ -1,26 +1,15 @@
 {
   "users": [
     {
-      "id": 0,
-      "nombre": "aaa",
-      "edad": "aaa",
-      "familia": "",
-      "linaje": "",
+      "id": 1,
       "cualidades": {},
-      "casa": "gfghgh",
+      "casa": "",
       "animalPatronus": "",
-      "clases": {}
-    },
-    {
-      "id": 2,
-      "nombre": "aaa",
-      "edad": "aaa",
-      "familia": "",
-      "linaje": "",
-      "cualidades": {},
-      "casa": "gfghgh",
-      "animalPatronus": "",
-      "clases": {}
+      "clases": {},
+      "nombre": "a",
+      "edad": "1",
+      "familia": "a",
+      "linaje": "Sangre pura"
     }
   ]
 }
