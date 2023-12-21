@@ -12,7 +12,7 @@ export class User {
     cualidades,
     casa,
     animalPatronus,
-    clases
+    clases,
   }) {
     this.id = id;
     this.nombre = nombre;
@@ -25,5 +25,3 @@ export class User {
     this.clases = clases;
   }
 }
-
-

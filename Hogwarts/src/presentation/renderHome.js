@@ -1,9 +1,5 @@
-import { generarNieve, checkMonth } from "../usecases/index";
+import { changeImage } from "../usecases/animaciones/changeImage"
 
 export const renderHome = () => {
-  if (!checkMonth()) {
-    main.classList.replace("chrismas", "normal");
-} else {
-    generarNieve();
-}
+  changeImage();
 };

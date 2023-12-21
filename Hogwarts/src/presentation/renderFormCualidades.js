@@ -1,23 +1,26 @@
+import { paso3 } from "../usecases";
 import { changeImage } from "../usecases/animaciones/changeImage";
-import { paso2 } from "../usecases/index";
 import { getUSerById } from "../usecases/peticiones/get-user-by-id";
 
-export const renderFormsEstudiante = async (callback) => {
-  const form = document.getElementById("form");
+export const renderFormCualidades = async (callback) => {
+  const form = document.getElementById("form2");
   const loadedUser = await getUSerById(1);
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formData = new FormData(form);
-
     const userLike = { ...loadedUser };
+    const cualidades = {};
+    
+
     for (const [key, value] of formData) {
-      userLike[key] = value;
+      cualidades[key] = value;
     }
-    userLike["clases"] = paso2();
+    userLike["cualidades"] = cualidades;
+    console.log(cualidades);
+    userLike["casa"] = paso3(cualidades);
+    console.log(paso3(cualidades));
     await callback(userLike);
   });
   changeImage();
 };
-
-

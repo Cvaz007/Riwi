@@ -1,18 +1,18 @@
 /**
- * 
- * @param {Object <estudiante>} estudiante  
- * @param {Object <Integer>} clases 
+ *
+ * @param {Object <estudiante>} estudiante
+ * @param {Object <Integer>} clases
  */
 export const paso6 = (estudiante, clases) => {
-    mostrarEstudiante(estudiante);
-    mostrarClases(clases);
+  mostrarEstudiante(estudiante);
+  mostrarClases(clases);
 };
 /**
- * 
- * @param {Object <estudiante>} estudiante 
+ *
+ * @param {Object <estudiante>} estudiante
  */
 const mostrarEstudiante = (estudiante) => {
-    alert(`
+  alert(`
   HASTA AHORA LLEVAS ESTOS DATOS:
   Nombre: ${estudiante.nombre}
   Edad: ${estudiante.edad}
@@ -24,17 +24,17 @@ const mostrarEstudiante = (estudiante) => {
   `);
 };
 /**
- * 
- * @param {Object <clases>} clases 
+ *
+ * @param {Object <clases>} clases
  */
 const mostrarClases = (clases) => {
-    for (let i = 0; i < clases.length; i++) {
-        if (clases[i].horario != undefined) {
-            alert(`
+  for (let i = 0; i < clases.length; i++) {
+    if (clases[i].horario != undefined) {
+      alert(`
         Clase vista: ${clases[i].nombre}
         Horario: ${clases[i].horario} 
         Propiedad: ${clases[i].propiedad}
         `);
-        }
     }
+  }
 };

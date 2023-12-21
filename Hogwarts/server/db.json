@@ -2,14 +2,47 @@
   "users": [
     {
       "id": 1,
-      "cualidades": {},
-      "casa": "",
+      "cualidades": {
+        "cualidad1": "Ambicion",
+        "cualidad2": "Determinacion",
+        "cualidad3": "Audacia"
+      },
+      "casa": "Gryffindor",
       "animalPatronus": "",
-      "clases": {},
-      "nombre": "a",
-      "edad": "1",
-      "familia": "a",
-      "linaje": "Sangre pura"
+      "clases": [
+        {
+          "profesor": "Kevin Slughorn",
+          "nombre": "transformaciones"
+        },
+        {
+          "profesor": "Maria Umbridge",
+          "nombre": "herbologia"
+        },
+        {
+          "profesor": "Liliana McGonagall",
+          "nombre": "pociones"
+        },
+        {
+          "profesor": "Jackie",
+          "nombre": "encantamientos"
+        },
+        {
+          "profesor": "Robinson Snape ",
+          "nombre": "defensa contra las artes oscuras"
+        },
+        {
+          "profesor": "David Filch",
+          "nombre": "animales magicos"
+        },
+        {
+          "profesor": "Ronald Sprout",
+          "nombre": "historia de magia"
+        }
+      ],
+      "nombre": "harry",
+      "edad": "77",
+      "familia": "No tiene",
+      "linaje": "Mestizo"
     }
   ]
 }
