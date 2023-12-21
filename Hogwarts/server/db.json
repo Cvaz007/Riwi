@@ -3,30 +3,31 @@
     {
       "id": 1,
       "cualidades": {
-        "cualidad1": "Creatividad",
+        "cualidad1": "Valor",
         "cualidad2": "Lealtad",
-        "cualidad3": "Inteligencia"
+        "cualidad3": "Paciencia"
       },
       "casa": "Hufflepuff",
-      "animalPatronus": "",
+      "animalPatronus": "Delfín",
       "clases": [
         {
           "profesor": "Kevin Slughorn",
           "nombre": "Transformaciones",
           "horario": "a",
-          "propiedad": "a"
+          "propiedad": "a",
+          "encantamiento": "Riddikulus"
         },
         {
           "profesor": "Maria Umbridge",
           "nombre": "Herbologia",
           "horario": "a",
-          "propiedad": "aa"
+          "propiedad": "a"
         },
         {
           "profesor": "Liliana McGonagall",
           "nombre": "Pociones",
           "horario": "a",
-          "propiedad": "aa"
+          "propiedad": "a"
         },
         {
           "profesor": "Jackie",
@@ -44,7 +45,7 @@
           "profesor": "David Filch",
           "nombre": "Animales magicos",
           "horario": "a",
-          "propiedad": "aa"
+          "propiedad": "a"
         },
         {
           "profesor": "Ronald Sprout",
@@ -53,10 +54,10 @@
           "propiedad": "a"
         }
       ],
-      "nombre": "Don Hector",
-      "edad": "23",
-      "familia": "Montaña",
-      "linaje": "Mestizo"
+      "nombre": "Kevin",
+      "edad": "20",
+      "familia": "Mejia",
+      "linaje": "Sangre pura"
     }
   ]
 }
