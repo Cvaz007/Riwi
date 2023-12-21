@@ -17,9 +17,7 @@ export const renderFormCualidades = async (callback) => {
       cualidades[key] = value;
     }
     userLike["cualidades"] = cualidades;
-    console.log(cualidades);
     userLike["casa"] = paso3(cualidades);
-    console.log(paso3(cualidades));
     await callback(userLike);
   });
   changeImage();

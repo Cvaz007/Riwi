@@ -1,4 +1,3 @@
-export {paso1} from "./pasos/paso1";
 export {paso2} from "./pasos/paso2";
 export {paso3} from "./pasos/paso3";
 export {paso4} from "./pasos/paso4";

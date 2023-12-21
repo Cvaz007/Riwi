@@ -2,22 +2,46 @@ export const paso2 = () => {
   return [
     {
       profesor: "Kevin Slughorn",
-      nombre: "transformaciones",
+      nombre: "Transformaciones",
+      horario: "",
+      propiedad: "",
+      encantamiento:"Riddikulus",
     },
-    { profesor: "Maria Umbridge", nombre: "herbologia" },
-    { profesor: "Liliana McGonagall", nombre: "pociones" },
-    { profesor: "Jackie", nombre: "encantamientos" },
+    {
+      profesor: "Maria Umbridge",
+      nombre: "Herbologia",
+      horario: "",
+      propiedad: "",
+    },
+    {
+      profesor: "Liliana McGonagall",
+      nombre: "Pociones",
+      horario: "",
+      propiedad: "",
+    },
+    {
+      profesor: "Jackie",
+      nombre: "Encantamientos",
+      horario: "",
+      propiedad: "",
+    },
     {
       profesor: "Robinson Snape ",
-      nombre: "defensa contra las artes oscuras",
+      nombre: "Defensa contra las artes oscuras",
+      horario: "",
+      propiedad: "",
     },
     {
       profesor: "David Filch",
-      nombre: "animales magicos",
+      nombre: "Animales magicos",
+      horario: "",
+      propiedad: "",
     },
     {
       profesor: "Ronald Sprout",
-      nombre: "historia de magia",
+      nombre: "Historia de magia",
+      horario: "",
+      propiedad: "",
     },
   ];
 };

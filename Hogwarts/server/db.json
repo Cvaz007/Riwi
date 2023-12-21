@@ -3,45 +3,59 @@
     {
       "id": 1,
       "cualidades": {
-        "cualidad1": "Ambicion",
-        "cualidad2": "Determinacion",
-        "cualidad3": "Audacia"
+        "cualidad1": "Creatividad",
+        "cualidad2": "Lealtad",
+        "cualidad3": "Inteligencia"
       },
-      "casa": "Gryffindor",
+      "casa": "Hufflepuff",
       "animalPatronus": "",
       "clases": [
         {
           "profesor": "Kevin Slughorn",
-          "nombre": "transformaciones"
+          "nombre": "Transformaciones",
+          "horario": "a",
+          "propiedad": "a"
         },
         {
           "profesor": "Maria Umbridge",
-          "nombre": "herbologia"
+          "nombre": "Herbologia",
+          "horario": "a",
+          "propiedad": "aa"
         },
         {
           "profesor": "Liliana McGonagall",
-          "nombre": "pociones"
+          "nombre": "Pociones",
+          "horario": "a",
+          "propiedad": "aa"
         },
         {
           "profesor": "Jackie",
-          "nombre": "encantamientos"
+          "nombre": "Encantamientos",
+          "horario": "a",
+          "propiedad": "a"
         },
         {
           "profesor": "Robinson Snape ",
-          "nombre": "defensa contra las artes oscuras"
+          "nombre": "Defensa contra las artes oscuras",
+          "horario": "a",
+          "propiedad": "a"
         },
         {
           "profesor": "David Filch",
-          "nombre": "animales magicos"
+          "nombre": "Animales magicos",
+          "horario": "a",
+          "propiedad": "aa"
         },
         {
           "profesor": "Ronald Sprout",
-          "nombre": "historia de magia"
+          "nombre": "Historia de magia",
+          "horario": "a",
+          "propiedad": "a"
         }
       ],
-      "nombre": "harry",
-      "edad": "77",
-      "familia": "No tiene",
+      "nombre": "Don Hector",
+      "edad": "23",
+      "familia": "Montaña",
       "linaje": "Mestizo"
     }
   ]
