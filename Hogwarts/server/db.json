@@ -3,60 +3,61 @@
     {
       "id": 1,
       "cualidades": {
-        "cualidad1": "Valor",
+        "cualidad1": "Justicia",
         "cualidad2": "Fuerza",
         "cualidad3": "Paciencia"
       },
-      "casa": "Gryffindor",
-      "animalPatronus": "Zorro Plateado",
+      "casa": "Hufflepuff",
+      "animalPatronus": "Delfín",
       "clases": [
         {
           "profesor": "Kevin Slughorn",
           "nombre": "Transformaciones",
-          "horario": "10",
+          "horario": "a",
           "propiedad": "a",
           "encantamiento": "Riddikulus"
         },
         {
           "profesor": "Maria Umbridge",
           "nombre": "Herbologia",
-          "horario": "10",
+          "horario": "a",
           "propiedad": "a"
         },
         {
           "profesor": "Liliana McGonagall",
-          "nombre": "Pociones",
-          "horario": "10",
-          "propiedad": "a"
+          "nombre": "Animales magicos",
+          "horario": "a",
+          "propiedad": "aa",
+          "pocion": ""
         },
         {
           "profesor": "Jackie",
           "nombre": "Encantamientos",
-          "horario": "10",
+          "horario": "a",
           "propiedad": "a"
         },
         {
           "profesor": "Robinson Snape ",
           "nombre": "Defensa contra las artes oscuras",
-          "horario": "10",
-          "propiedad": "a"
+          "horario": "a",
+          "propiedad": "aa"
         },
         {
           "profesor": "David Filch",
-          "nombre": "Animales magicos",
-          "horario": "10",
+          "nombre": "Pociones",
+          "horario": "a",
           "propiedad": "a"
         },
         {
           "profesor": "Ronald Sprout",
           "nombre": "Historia de magia",
-          "horario": "10",
+          "horario": "a",
           "propiedad": "a"
         }
       ],
-      "nombre": "angela",
-      "edad": "22",
-      "familia": "black",
+      "nombre": "Sebastian",
+      "edad": "20",
+      "familia": "Moreno",
       "linaje": "Sangre pura"
     }
   ]
