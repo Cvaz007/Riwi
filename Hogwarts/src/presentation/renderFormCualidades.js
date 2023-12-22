@@ -1,5 +1,7 @@
 import { paso3 } from "../usecases";
 import { changeImage } from "../usecases/animaciones/changeImage";
+import { cleanForm } from "../usecases/elements/cleanForm";
+import { renderAncla } from "../usecases/elements/renderAncla";
 import { getUSerById } from "../usecases/peticiones/get-user-by-id";
 
 export const renderFormCualidades = async (callback) => {
@@ -19,6 +21,9 @@ export const renderFormCualidades = async (callback) => {
     userLike["cualidades"] = cualidades;
     userLike["casa"] = paso3(cualidades);
     await callback(userLike);
+   
+    cleanForm(form);
+    window.location.href = "clases.html"
   });
   changeImage();
 };

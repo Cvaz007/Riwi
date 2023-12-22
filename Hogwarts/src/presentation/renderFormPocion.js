@@ -1,4 +1,6 @@
 import { changeImage } from "../usecases/animaciones/changeImage";
+import { cleanForm } from "../usecases/elements/cleanForm";
+import { renderAncla } from "../usecases/elements/renderAncla";
 import { getUSerById } from "../usecases/peticiones/get-user-by-id";
 
 export const renderFormPocion = async (callback) => {
@@ -15,7 +17,9 @@ export const renderFormPocion = async (callback) => {
       pocion[key] = value;
     }
     userLike["clases"] = crearPocion(pocion,userLike);
-    await callback(userLike);
+    await callback(userLike); 
+    cleanForm(form);
+    window.location.href = "listarDatos.html"
   });
   changeImage();
 };

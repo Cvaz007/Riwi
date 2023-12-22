@@ -17,7 +17,6 @@ export const renderListar = async () => {
 
   userLike["clases"].forEach((clase,index) => {
     const tr = document.createElement("tr");
-    console.log(clase);
     tr.innerHTML=`
     <td>${index+1}</td>
     <td>${clase["profesor"]}</td>

@@ -1,5 +1,7 @@
 import { paso5 } from "../usecases";
 import { changeImage } from "../usecases/animaciones/changeImage";
+import { cleanForm } from "../usecases/elements/cleanForm";
+import { renderAncla } from "../usecases/elements/renderAncla";
 import { getUSerById } from "../usecases/peticiones/get-user-by-id";
 
 export const renderFormClases = async (callback) => {
@@ -20,6 +22,9 @@ export const renderFormClases = async (callback) => {
     }
     userLike["animalPatronus"]= paso5();
     await callback(userLike);
+   
+    cleanForm(form);
+    window.location.href = "boggart.html";
   });
   changeImage();
 };

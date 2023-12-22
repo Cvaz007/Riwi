@@ -4,61 +4,61 @@
       "id": 1,
       "cualidades": {
         "cualidad1": "Justicia",
-        "cualidad2": "Fuerza",
-        "cualidad3": "Paciencia"
+        "cualidad2": "Lealtad",
+        "cualidad3": "Inteligencia"
       },
-      "casa": "Hufflepuff",
-      "animalPatronus": "Delfín",
+      "casa": "Ravenclaw",
+      "animalPatronus": "Lobo",
       "clases": [
         {
           "profesor": "Kevin Slughorn",
           "nombre": "Transformaciones",
-          "horario": "a",
-          "propiedad": "a",
+          "horario": "22",
+          "propiedad": "22",
           "encantamiento": "Riddikulus"
         },
         {
           "profesor": "Maria Umbridge",
           "nombre": "Herbologia",
-          "horario": "a",
-          "propiedad": "a"
+          "horario": "22",
+          "propiedad": "22"
         },
         {
           "profesor": "Liliana McGonagall",
           "nombre": "Animales magicos",
-          "horario": "a",
-          "propiedad": "aa",
+          "horario": "22",
+          "propiedad": "22",
           "pocion": ""
         },
         {
           "profesor": "Jackie",
           "nombre": "Encantamientos",
-          "horario": "a",
-          "propiedad": "a"
+          "horario": "22",
+          "propiedad": "22"
         },
         {
           "profesor": "Robinson Snape ",
           "nombre": "Defensa contra las artes oscuras",
-          "horario": "a",
-          "propiedad": "aa"
+          "horario": "22",
+          "propiedad": "22"
         },
         {
           "profesor": "David Filch",
           "nombre": "Pociones",
-          "horario": "a",
-          "propiedad": "a"
+          "horario": "22",
+          "propiedad": "22"
         },
         {
           "profesor": "Ronald Sprout",
           "nombre": "Historia de magia",
-          "horario": "a",
-          "propiedad": "a"
+          "horario": "22",
+          "propiedad": "22"
         }
       ],
-      "nombre": "Sebastian",
-      "edad": "20",
-      "familia": "Moreno",
-      "linaje": "Sangre pura"
+      "nombre": "hector",
+      "edad": "23",
+      "familia": "jasd",
+      "linaje": "Muggle"
     }
   ]
 }
