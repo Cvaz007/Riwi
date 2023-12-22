@@ -4,59 +4,59 @@
       "id": 1,
       "cualidades": {
         "cualidad1": "Valor",
-        "cualidad2": "Lealtad",
+        "cualidad2": "Fuerza",
         "cualidad3": "Paciencia"
       },
-      "casa": "Hufflepuff",
-      "animalPatronus": "Delfín",
+      "casa": "Gryffindor",
+      "animalPatronus": "Zorro Plateado",
       "clases": [
         {
           "profesor": "Kevin Slughorn",
           "nombre": "Transformaciones",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a",
           "encantamiento": "Riddikulus"
         },
         {
           "profesor": "Maria Umbridge",
           "nombre": "Herbologia",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         },
         {
           "profesor": "Liliana McGonagall",
           "nombre": "Pociones",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         },
         {
           "profesor": "Jackie",
           "nombre": "Encantamientos",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         },
         {
           "profesor": "Robinson Snape ",
           "nombre": "Defensa contra las artes oscuras",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         },
         {
           "profesor": "David Filch",
           "nombre": "Animales magicos",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         },
         {
           "profesor": "Ronald Sprout",
           "nombre": "Historia de magia",
-          "horario": "a",
+          "horario": "10",
           "propiedad": "a"
         }
       ],
-      "nombre": "Kevin",
-      "edad": "20",
-      "familia": "Mejia",
+      "nombre": "angela",
+      "edad": "22",
+      "familia": "black",
       "linaje": "Sangre pura"
     }
   ]

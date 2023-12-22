@@ -3,7 +3,8 @@ import { saveUser } from "./usecases/peticiones/save-user";
 import userStore from "./store/user-store";
 import { renderFormCualidades } from "./presentation/renderFormCualidades";
 import { renderFormClases } from "./presentation/renderFormClases";
-
+import {renderFormPocion} from './presentation/renderFormPocion';
+import { renderListar } from "./presentation/renderListar";
 /**
  *
  * @param {HTMLDivElement} element
@@ -22,4 +23,9 @@ export const indexApp = () => {
     const user = await saveUser(userLike);
     userStore.onUserChanged(user);
   });
+  renderFormPocion(async (userLike) => {
+    const user = await saveUser(userLike);
+    userStore.onUserChanged(user);
+  });
+  renderListar();
 };

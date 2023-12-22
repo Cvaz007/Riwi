@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/formEstudiante.css" />
+  </head>
+  <body>
+    <main id="main">
+      <div
+        id="container"
+        class="d-flex align-items-center justify-content-center chrismas gap-5 "
+      >
+        <div class="nieve"></div>
+        <form id="form4" class="row g-3 needs-validation p-3" novalidate>
+          <h1>Prepara tu pocion!</h1>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Tallo</label>
+            <input
+              type="number"
+              class="form-control"
+              id="validationCustom01"
+              placeholder=""
+              required
+              name="tallo"
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Crisopos</label>
+            <input
+              type="number"
+              class="form-control"
+              id="validationCustom02"
+              placeholder=""
+              required
+              name="drisopos"
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Tiempo</label>
+            <input
+              type="number"
+              class="form-control"
+              id="validationCustom03"
+              placeholder=""
+              required
+              name="tiempo"
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>          
+
+          <div class="col-13">
+            <button id="btnForm" class="btn btn-dark" type="submit">
+              Guardar
+            </button>
+            <a class="btn btn-dark" href="listarDatos.html"> Siguiente</a>
+          </div>
+        </form>
+
+        <div id="img">
+          <img
+            src="../../public/assets/imgs/pocion.gif"
+            alt="Logo"
+            width="400px"
+            height="400px"
+            class="rounded"
+          />
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="../../main.js"></script>
+  </body>
+</html>

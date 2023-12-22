@@ -1,4 +1,5 @@
 import { paso5 } from "../usecases";
+import { changeImage } from "../usecases/animaciones/changeImage";
 import { getUSerById } from "../usecases/peticiones/get-user-by-id";
 
 export const renderFormClases = async (callback) => {
@@ -20,6 +21,7 @@ export const renderFormClases = async (callback) => {
     userLike["animalPatronus"]= paso5();
     await callback(userLike);
   });
+  changeImage();
 };
 
 const renderClases =  (loadedUser) => {
