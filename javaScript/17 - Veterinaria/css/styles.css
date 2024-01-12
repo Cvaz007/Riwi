@@ -30,8 +30,21 @@ body {
 
 .card {
   width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-cites {
   overflow-y: auto;
+}
+
+.imgPerrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: max-content;
+  border-radius: 15px;
+  margin: 5px;
 }
