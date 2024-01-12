@@ -1,20 +1,24 @@
 //Escucchadores
-form.addEventListener("submit", async(event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
 
-  const paciente = { };
+  const paciente = {};
   for (const [key, value] of formData) {
     if (value == "") return;
     paciente[key] = value;
   }
-  paciente.img = await perritoImg();
-  pacientes.push(paciente);
+  
+
   if (pacientes[indicePaciente]) {
-    editarPaciente(paciente)
-    console.log(indicePaciente);
+    paciente.img = pacientes[indicePaciente].img;
+    editarPaciente(paciente);
+  } else {
+    paciente.img = await perritoImg();
+    pacientes.push(paciente);
+    localStoragePacientes(pacientes);
   }
-  else localStoragePacientes(pacientes);
+  form.reset;
 });
 
 //Funciones
@@ -31,16 +35,13 @@ const asignarIndicePaciente = (indice) => {
   inputs.forEach((input) => {
     const inputName = input.getAttribute("name");
     input.value = pacientes[indice][inputName];
-  })
-  editarPaciente(pacientes[indice]);
+  });
 };
 
 const editarPaciente = (paciente) => {
   pacientes[indicePaciente] = paciente;
   localStoragePacientes(pacientes);
 };
-
-const mostrarInput = () => {};
 
 const listarPacientes = () => {
   contenedorCartas.innerHTML = "";
@@ -92,7 +93,6 @@ const cargarCache = () => {
   document.addEventListener("DOMContentLoaded", () => {
     if (listaPacientesCache) {
       pacientes = listaPacientesCache;
-      console.log(pacientes);
       listarPacientes();
     }
   });

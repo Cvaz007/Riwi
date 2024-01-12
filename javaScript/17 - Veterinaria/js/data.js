@@ -1,5 +1,5 @@
 let pacientes = [];
-let indicePaciente=undefined;
+let indicePaciente;
 
 const listaPacientesCache = JSON.parse(localStorage.getItem("pacientesCache"));
 
