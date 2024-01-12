@@ -1,14 +1,16 @@
 //Escucchadores
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async(event) => {
   event.preventDefault();
   const formData = new FormData(form);
 
-  const paciente = { ...pacientes };
+  const paciente = { };
   for (const [key, value] of formData) {
+    if (value == "") return;
     paciente[key] = value;
   }
+  paciente.img = await perritoImg();
   pacientes.push(paciente);
-  if (paciente[indicePaciente]) {
+  if (pacientes[indicePaciente]) {
     editarPaciente(paciente)
     console.log(indicePaciente);
   }
@@ -30,6 +32,7 @@ const asignarIndicePaciente = (indice) => {
     const inputName = input.getAttribute("name");
     input.value = pacientes[indice][inputName];
   })
+  editarPaciente(pacientes[indice]);
 };
 
 const editarPaciente = (paciente) => {
@@ -45,6 +48,7 @@ const listarPacientes = () => {
     contenedorCartas.innerHTML += `
     <div class="card card_cite">
               <div class="card-body">
+              <img class="imgPerrito" src="${paciente.img}" alt="Perrito">
                 <h5 class="card-title fs-3 fw-bold">${paciente.petName}</h5>
                 <p class="card-text">
                   <div class="d-flex gap-2">
@@ -81,7 +85,6 @@ const listarPacientes = () => {
 
 const localStoragePacientes = (pacientes) => {
   localStorage.setItem("pacientesCache", JSON.stringify(pacientes));
-  cargarCache();
   listarPacientes();
 };
 
@@ -89,6 +92,7 @@ const cargarCache = () => {
   document.addEventListener("DOMContentLoaded", () => {
     if (listaPacientesCache) {
       pacientes = listaPacientesCache;
+      console.log(pacientes);
       listarPacientes();
     }
   });
