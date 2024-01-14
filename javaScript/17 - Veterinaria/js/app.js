@@ -8,7 +8,6 @@ form.addEventListener("submit", async (event) => {
     if (value == "") return;
     paciente[key] = value;
   }
-  
 
   if (pacientes[indicePaciente]) {
     paciente.img = pacientes[indicePaciente].img;
@@ -18,7 +17,7 @@ form.addEventListener("submit", async (event) => {
     pacientes.push(paciente);
     localStoragePacientes(pacientes);
   }
-  form.reset;
+  form.reset();
 });
 
 //Funciones
@@ -41,6 +40,7 @@ const asignarIndicePaciente = (indice) => {
 const editarPaciente = (paciente) => {
   pacientes[indicePaciente] = paciente;
   localStoragePacientes(pacientes);
+  indicePaciente = undefined;
 };
 
 const listarPacientes = () => {
