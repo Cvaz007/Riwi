@@ -34,13 +34,13 @@ const consumirTxtSegundaforma = async () => {
   const URL = "data/data.txt";
   try {
     const data = await fetch(URL);
+    if (data.status !== 200) {
+      throw new Error("Ocurrio un error");
+    }
     //La respuesta se toma segun el tipo del archivo, en este caso es un txt por lo que es .text(), pero se es un json seria .json()
     const res = await data.text();
     textoHTML.textContent = res;
-    
   } catch (error) {
     console.error(error);
   }
 };
-
-
