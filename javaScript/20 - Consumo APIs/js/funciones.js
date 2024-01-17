@@ -2,7 +2,7 @@ export const consumirAPI = async (mensaje) => {
   const URL = "https://jsonplaceholder.typicode.com/photos";
   const respuesta = await fetch(URL);
   const datos = await respuesta.json();
-  imprimirDatos(datos.splice(1, 100));
+  imprimirDatos(datos.splice(0, 450));
 };
 
 const imprimirDatos = (datos) => {
