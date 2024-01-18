@@ -3,6 +3,7 @@
 :root {
   --primary: #222;
   --secondary: #6441a4;
+  --black: #000;
 }
 
 * {
@@ -61,4 +62,50 @@ body {
   font-size: 14px;
   background: var(--secondary);
   padding: 4px 10px;
+}
+
+/*CARDS*/
+.container-cards {
+  margin: 20px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container-cards .card {
+  background: var(--black);
+  border: 3px solid var(--secondary);
+  padding: 10px;
+  border-radius: 10px;
+  width: 325px;
+  display: flex;
+  height: 630px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container-cards .card .title-movie {
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.container-cards .card p {
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+
+.container-cards .card p span {
+  font-weight: normal;
+}
+
+.container-cards .card button {
+  background: var(--secondary);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
