@@ -1,0 +1,40 @@
+* {
+  box-sizing: content-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #0b0f34;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+figure img {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  padding: 0px 10%;
+}
+
+.card {
+  width: auto;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
