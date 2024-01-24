@@ -23,7 +23,7 @@ figure img {
 
 #container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   padding: 0px 10%;
 }
@@ -37,4 +37,47 @@ figure img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/**Card SHOW MORE**/
+
+.card-show-more {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+
+  & iframe {
+    margin: 15px;
+  }
+
+  & i {
+    color: #000000;
+    border: 1px solid #000;
+    border-radius: 100%;
+  }
+
+  & .title {
+    display: flex;
+    margin: 3px;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+  }
+
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #949494;
+
+  }
+
+  &.card-show-more p {
+    margin: 0px 10px 20px 15px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 10px;
+  }
 }
