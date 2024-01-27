@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
+  <body class="d-middle">
+    <form id="form">
+      <h1 class="text-center">Register</h1>
+      <!-- INPUT DE EMAIL -->
+      <div class="mb-3">
+        <label for="email">Type your email</label>
+        <input type="email" placeholder="email" id="email" required />
+      </div>
+
+      <!-- INPUT DE PASSWORD -->
+      <div class="mb-3">
+        <label for="password">Type your password</label>
+        <input type="password" placeholder="password" id="password" required />
+      </div>
+
+      <!-- INPUT DE CONFIRMATION PASSWORD -->
+      <div class="mb-3">
+        <label for="password-confirmation">Type your password again</label>
+        <input
+          type="password"
+          placeholder="password-confirmation"
+          id="password-confirmation"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <!-- Redirect the same where it's execute folder index.html  -->
+        <a href="../index.html">Sign up</a>
+      </div>
+
+      <input type="submit" value="Register" class="btn btn-primary" />
+    </form>
+
+    <script src="../js/register/index.js" type="module"></script>
+  </body>
+</html>
