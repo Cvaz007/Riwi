@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 //Selectors
 const form = document.getElementById("form");
 const email = document.getElementById("email");
@@ -10,16 +9,15 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   //Use the function for register an user
-  console.log("??");
   registerUser();
 });
 
 const registerUser = () => {
   //1. Password must be the same
-  const {} = validatePassword();
+  const { validated, message } = validatePassword();
   //2. Safe password
-  if (!validate) {
-    showAlert();
+  if (!validated) {
+    showAlert(message);
     return;
   }
   //3. No exist an account
@@ -37,11 +35,15 @@ const validatePassword = () => {
   };
 };
 
-const showAlert = () => {
+const showAlert = (message) => {
   Swal.fire({
+    title: "Error!",
+    text: message,
     icon: "error",
-    title: "Oops...",
-    text: "Something went wrong!",
-    footer: '<a href="#">Why do I have this issue?</a>'
+    toast: "true",
+    timer: 4000,
+    showConfirmButton: false,
+    position: "bottom-right",
+    confirmButtonText: "Aceptar",
   });
 };
