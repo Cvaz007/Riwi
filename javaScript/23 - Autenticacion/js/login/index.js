@@ -44,6 +44,3 @@ const showAlert = (message) => {
     confirmButtonText: "ok",
   });
 };
-// To check a password:
-// Load hash from your password DB. This step is when I get the password
-// bcrypt.compareSync(data[0].password, 8); // true
