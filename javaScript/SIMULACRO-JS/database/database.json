@@ -1,0 +1,28 @@
+{
+  "news": [
+    {
+      "id": "f234",
+      "image": "url",
+      "title": "World",
+      "publicationDate": "10/02/2024",
+      "content": "abcd es...",
+      "userId": "d371",
+      "categoryId": "d234"
+    }
+  ],
+  "categories": [
+    {
+      "id": "d234",
+      "name": "Your Name",
+      "description": "Example"
+    }
+  ],
+  "users": [
+    {
+      "id": "d371",
+      "name": "Your Name",
+      "email": "test@riwi.io",
+      "password": "riwi2024"
+    }
+  ]
+}

@@ -9,6 +9,11 @@
       "id": "b5a1",
       "name": "Terry",
       "age": "26"
+    },
+    {
+      "id": "f8ae",
+      "name": "Truman Capote",
+      "age": "77"
     }
   ],
   "books": [
@@ -23,6 +28,12 @@
       "name": "Nuevo libro",
       "date": "2024-01-17",
       "authorId": "6a21"
+    },
+    {
+      "id": "986c",
+      "name": "A sangre fria",
+      "date": "2024-02-14",
+      "authorId": "f8ae"
     }
   ]
 }

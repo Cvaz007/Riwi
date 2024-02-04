@@ -10,7 +10,7 @@ const selectAuthor = document.getElementById("idAuthor")
 
 const listBooks = document.getElementById("listBooks")
 
-const URLAuthor = "http://localhost:3000/athors"
+const URLAuthor = "http://localhost:3000/authors"
 const URLBooks = "http://localhost:3000/books"
 
 document.addEventListener("DOMContentLoaded", () => {
