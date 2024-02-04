@@ -8,6 +8,15 @@
       "content": "abcd es...",
       "userId": "d371",
       "categoryId": "d234"
+    },
+    {
+      "id": "8570",
+      "image": "fdsfds",
+      "title": "Desarrollo De Software",
+      "publicationDate": "4-2-2024",
+      "content": "yui",
+      "userId": "d371",
+      "categoryId": "f0ac"
     }
   ],
   "categories": [
@@ -15,6 +24,16 @@
       "id": "d234",
       "name": "Your Name",
       "description": "Example"
+    },
+    {
+      "id": "0f21",
+      "name": "Sebastian Moreno",
+      "description": "gfdfgfdgf"
+    },
+    {
+      "id": "f0ac",
+      "name": "prueba 2dfafa",
+      "description": "uuiyiu"
     }
   ],
   "users": [

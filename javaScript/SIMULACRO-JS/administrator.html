@@ -107,41 +107,15 @@
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Nombre</th>
+                <th>Name</th>
                 <th>Description</th>
                 <th>Actions</th>
               </tr>
             </thead>
 
             <tbody id="categorias-tbody">
-              <tr>
-                <td>1</td>
-                <td>Tecnología</td>
-                <td>Últimas noticias sobre tecnología e innovación</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Deportes</td>
-                <td>Noticias y análisis deportivos</td>
-
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Cultura</td>
-                <td>Eventos culturales, libros y arte</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
+              
+              
             </tbody>
           </table>
         </div>
@@ -173,72 +147,14 @@
                 <th>Content</th>
                 <th>Publication Date</th>
                 <th>Author</th>
-                <th>Caregory</th>
+                <th>CaTegory</th>
                 <th>Actions</th>
               </tr>
             </thead>
 
-            <tbody id="categorias-tbody">
-              <tr>
-                <td>
-                  <img
-                    src="https://img.freepik.com/foto-gratis/mano-que-sostiene-campana-anuncios-marketing-megafono_53876-129003.jpg"
-                    alt="photo"
-                    height="50"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </td>
-                <td>Noticia de Tecnología</td>
-                <td>Últimas noticias sobre tecnología e innovación</td>
-                <td>2024-01-30</td>
-                <td>Kevin Mejia</td>
-                <td>Tecnología</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://img.freepik.com/foto-gratis/mano-que-sostiene-campana-anuncios-marketing-megafono_53876-129003.jpg"
-                    alt="photo"
-                    height="50"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </td>
-                <td>Noticia de Tecnología</td>
-                <td>Últimas noticias sobre tecnología e innovación</td>
-                <td>2024-01-30</td>
-                <td>Kevin Mejia</td>
-                <td>Tecnología</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://img.freepik.com/foto-gratis/mano-que-sostiene-campana-anuncios-marketing-megafono_53876-129003.jpg"
-                    alt="photo"
-                    height="50"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </td>
-                <td>Noticia de Tecnología</td>
-                <td>Últimas noticias sobre tecnología e innovación</td>
-                <td>2024-01-30</td>
-                <td>Kevin Mejia</td>
-                <td>Tecnología</td>
-                <td>
-                  <button class="btn btn-primary">Edit</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
+            <tbody id="notices-tbody">
+              
+              
             </tbody>
           </table>
         </div>
@@ -254,7 +170,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content">
+        <form class="modal-content" id="form_categories">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Category</h1>
             <button
@@ -268,6 +184,7 @@
             <div class="mb-3">
               <label for="nameCategory" class="form-label">Name</label>
               <input
+              name="name"
                 type="text"
                 class="form-control"
                 id="nameCategory"
@@ -280,6 +197,7 @@
                 >Description</label
               >
               <textarea
+              name="description"
                 class="form-control"
                 id="descriptionCategory"
                 rows="3"
@@ -309,7 +227,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content">
+        <form class="modal-content" id="form_notices">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Notice</h1>
             <button
@@ -323,6 +241,7 @@
             <div class="mb-3">
               <label for="nameNotice" class="form-label">Name</label>
               <input
+                name="title"
                 type="text"
                 class="form-control"
                 id="nameNotice"
@@ -332,18 +251,19 @@
 
             <div class="mb-3">
               <label for="urlImage" class="form-label">Url Image</label>
-              <input type="text" class="form-control" id="urlImage" />
+              <input name="image" type="text" class="form-control" id="urlImage" />
             </div>
 
             <div class="mb-3">
               <label for="idCategory" class="form-label">Category</label>
               <select
+                name="categoryId"
                 class="form-select"
                 aria-label="Selected Category"
                 id="idCategory"
                 required
               >
-                <option selected value="">Select a category</option>
+                <option  selected value="">Select a category</option>
               </select>
             </div>
 
@@ -352,6 +272,7 @@
                 >Notice description</label
               >
               <textarea
+              name="content"
                 class="form-control"
                 id="contentNotice"
                 rows="3"
@@ -372,5 +293,6 @@
       </div>
     </div>
     <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/admin/index.js"></script>
   </body>
 </html>
