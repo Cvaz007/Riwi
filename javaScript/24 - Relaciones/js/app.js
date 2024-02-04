@@ -1,4 +1,4 @@
-//Selectores
+//Selects
 const formAuthor = document.getElementById("form-Author")
 const nameAuthor = document.getElementById("name-author")
 const ageAuthor = document.getElementById("age-author")
@@ -30,13 +30,13 @@ formAuthor.addEventListener("submit", (event) => {
 })
 
 async function getBooks() {
-    const response = await fetch(`${URLBooks}?_embed=athor`)
+    const response = await fetch(`${URLBooks}?_embed=author`)
     const data = await response.json()
 
     console.log(data)
     data.forEach(books => {
         listBooks.innerHTML += `
-            <li>Nombre: ${books.name} - Autor: ${books.athor.name}</li>
+            <li>Nombre: ${books.name} - Autor: ${books.author.name}</li>
         `;
     })
 }
@@ -50,7 +50,7 @@ async function createBook() {
         body: JSON.stringify({
             name: nameBook.value,
             date: dateBook.value,
-            athorId: selectAuthor.value
+            authorId: selectAuthor.value
         })
     })
 }

@@ -1,5 +1,5 @@
 {
-  "athors": [
+  "authors": [
     {
       "id": "6a21",
       "name": "Marcos",
@@ -16,13 +16,13 @@
       "id": "c7f1",
       "name": "el olvido que seremos",
       "date": "2024-01-31",
-      "athorId": "b5a1"
+      "authorId": "b5a1"
     },
     {
       "id": "cc89",
       "name": "Nuevo libro",
       "date": "2024-01-17",
-      "athorId": "6a21"
+      "authorId": "6a21"
     }
   ]
 }
