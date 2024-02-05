@@ -3,6 +3,7 @@ const formNotices = document.getElementById("form_notices");
 const selectCategory = document.getElementById("idCategory");
 const tableCategories = document.getElementById("categorias-tbody");
 const tableNotices = document.getElementById("notices-tbody");
+let categoryId, newId;
 
 const URLBase = "http://localhost:3000/";
 
@@ -21,13 +22,12 @@ formCategories.addEventListener("submit", (event) => {
     category[key] = value;
   }
 
-  const dataId = event.target.getAttribute("data-id");
-  console.log(dataId);
-  // if (!dataId) {
-  //   createCategory(category);
-  // } else {
-  //   editCategory(dataId);
-  // }
+  if (!categoryId) {
+    createCategory(category);
+  } else {
+    updateCategory(category);
+    categoryId = undefined;
+  }
 });
 
 formNotices.addEventListener("submit", (event) => {
@@ -38,7 +38,12 @@ formNotices.addEventListener("submit", (event) => {
     if (!value) return alert("You need complete all inputs!");
     notice[key] = value;
   }
-  createNew(notice);
+  if (!newId) {
+    createNew(notice);
+  } else {
+    updateNew(notice);
+    newId = undefined;
+  }
 });
 
 const getAllNews = async () => {
@@ -63,8 +68,8 @@ const getAllNews = async () => {
       <td>${notice.user.name}</td>
       <td>${notice.category.name}</td>
       <td>
-        <button class="btn btn-primary editNew" data-bs-toggle="modal"
-        data-bs-target="#modal-notice" data-id="${notice.id}">Edit</button>
+        <button class="btn btn-primary edit_new" data-bs-toggle="modal"
+        data-bs-target="#modal-notice" onclick="editNew('${notice.id}')">Edit</button>
         <button class="btn btn-danger deleteNew" onclick="deleteNew('${notice.id}')">Delete</button>
       </td>
     </tr>
@@ -83,8 +88,10 @@ const getAllCategories = async () => {
       <td>${category.name}</td>
       <td>${category.description}</td>
       <td>
-        <button class="btn btn-primary editCategory" data-bs-toggle="modal"
-        data-bs-target="#modal-category" data-id="${category.id}">Edit</button>
+        <button class="btn btn-primary edit_category" data-bs-toggle="modal"
+        data-bs-target="#modal-category" onclick="editCategory('${
+          category.id
+        }')">Edit</button>
         <button class="btn btn-danger deleteCategory" onclick="deleteCategory('${
           category.id
         }')">Delete</button>
@@ -119,6 +126,20 @@ const getIdUser = () => {
   const user = JSON.parse(localStorage.getItem("userCache"));
   return user.id;
 };
+
+const getCategoryById = async (id) => {
+  const response = await fetch(`${URLBase}categories/${id}`);
+  const data = await response.json();
+
+  return data;
+};
+
+const getNoticeById = async (id) => {
+  const response = await fetch(`${URLBase}news/${id}`);
+  const data = await response.json();
+
+  return data;
+}
 
 const createCategory = async (category) => {
   await fetch(`${URLBase}categories`, {
@@ -172,9 +193,46 @@ const deleteCategory = async (idCategory) => {
   });
 };
 
-//Preguntar como sacar el modal lleno
-const editNew = async (id) => {};
+const updateCategory = async (category) => {
+  await fetch(`${URLBase}categories/${categoryId}`, {
+    method: "PATCH",
+    body: JSON.stringify(category),
+  });
+};
+
+const updateNew = async (notice) => {
+  await fetch(`${URLBase}news/${newId}`, {
+    method: "PATCH",
+    body: JSON.stringify(notice),
+  });
+}
+
+const editNew = async (id) => {
+  newId = id;
+  const notice = await getNoticeById(id);
+  renderModalNew(notice);
+};
 
 const editCategory = async (id) => {
-  console.log("Editar categoria");
+  categoryId = id;
+  const category = await getCategoryById(id);
+  renderModalCategory(category);
+};
+
+const renderModalCategory = (category) => {
+  const textArea = document.getElementById("descriptionCategory");
+  const nameCategory = document.getElementById("nameCategory");
+  nameCategory.value = category.name;
+  textArea.value = category.description;
+};
+
+const renderModalNew = (notice) => {
+  const nameNotice = document.getElementById("nameNotice");
+  const urlImage = document.getElementById("urlImage");
+  const idCategory = document.getElementById("idCategory");
+  const contentNotice = document.getElementById("contentNotice");
+  nameNotice.value = notice.title;
+  urlImage.value = notice.image;
+  idCategory.value = notice.categoryId;
+  contentNotice.value = notice.content;
 };

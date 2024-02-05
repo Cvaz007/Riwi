@@ -2,7 +2,7 @@
   "news": [
     {
       "id": "f234",
-      "image": "url",
+      "image": "https://th.bing.com/th/id/OIP.EF_rH_CGlInjFiT_D71OjAHaE8?rs=1&pid=ImgDetMain",
       "title": "World",
       "publicationDate": "10/02/2024",
       "content": "abcd es...",
@@ -32,12 +32,12 @@
     },
     {
       "id": "f0ac",
-      "name": "prueba 2dfafa",
-      "description": "uuiyiu"
+      "name": "prueba",
+      "description": "Sera que si da esta cosa?"
     },
     {
       "id": "ff57",
-      "name": "Fake",
+      "name": "Fake but no",
       "description": "Is fake"
     }
   ],
