@@ -20,7 +20,14 @@ formCategories.addEventListener("submit", (event) => {
     if (!value) return alert("You need complete all inputs!");
     category[key] = value;
   }
-  createCategory(category);
+
+  const dataId = event.target.getAttribute("data-id");
+  console.log(dataId);
+  // if (!dataId) {
+  //   createCategory(category);
+  // } else {
+  //   editCategory(dataId);
+  // }
 });
 
 formNotices.addEventListener("submit", (event) => {
@@ -56,7 +63,8 @@ const getAllNews = async () => {
       <td>${notice.user.name}</td>
       <td>${notice.category.name}</td>
       <td>
-        <button class="btn btn-primary editNew" data-id="${notice.id}">Edit</button>
+        <button class="btn btn-primary editNew" data-bs-toggle="modal"
+        data-bs-target="#modal-notice" data-id="${notice.id}">Edit</button>
         <button class="btn btn-danger deleteNew" onclick="deleteNew('${notice.id}')">Delete</button>
       </td>
     </tr>
@@ -75,9 +83,8 @@ const getAllCategories = async () => {
       <td>${category.name}</td>
       <td>${category.description}</td>
       <td>
-        <button class="btn btn-primary editCategory" data-id="${
-          category.id
-        }">Edit</button>
+        <button class="btn btn-primary editCategory" data-bs-toggle="modal"
+        data-bs-target="#modal-category" data-id="${category.id}">Edit</button>
         <button class="btn btn-danger deleteCategory" onclick="deleteCategory('${
           category.id
         }')">Delete</button>
@@ -163,14 +170,11 @@ const deleteCategory = async (idCategory) => {
   await fetch(`${URLBase}categories/${idCategory}`, {
     method: "DELETE",
   });
-  
 };
 
-//Preguntar como sacar el modal lleno 
-const editNew = async (id) => {
-  
-}
+//Preguntar como sacar el modal lleno
+const editNew = async (id) => {};
 
 const editCategory = async (id) => {
-  
-}
+  console.log("Editar categoria");
+};
