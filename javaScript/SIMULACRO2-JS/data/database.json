@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "sebas@gmail.com",
+      "password": "123",
+      "name": "Sebastian Moreno E",
+      "photo": "https://media.licdn.com/dms/image/D4E03AQEsaY2cq5f6yg/profile-displayphoto-shrink_200_200/0/1697500430863?e=1713398400&v=beta&t=rv-_FtSSmuH4MPDu0Po8rXuqQ8NdvNiLsbK-TmSX54o"
+    },
+    {
+      "id": "35a5",
+      "name": "juan carlos",
+      "email": "jc@gmail.com",
+      "password": "123"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "userId": "1",
+      "content": "Hi!",
+      "date": ""
+    }
+  ],
+  "conversations": [
+    {
+      "id": "1",
+      "messageId": [
+        "1"
+      ]
+    }
+  ],
+  "friends": [
+    {
+      "userId": "1",
+      "friendId": [
+        "1",
+        "2",
+        "3"
+      ],
+      "id": "363c"
+    }
+  ]
+}
