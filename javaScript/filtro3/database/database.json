@@ -1,0 +1,139 @@
+{
+  "companies": [
+    {
+      "id": "2034",
+      "email": "admin@riwi.io",
+      "nameCompany": "Riwi",
+      "imageCompany": "https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png",
+      "nit": "90212132",
+      "password": "123"
+    },
+    {
+      "id": "2035",
+      "email": "admin@google.com",
+      "nameCompany": "Google",
+      "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "nit": "90212132",
+      "password": "123"
+    },
+    {
+      "id": "4cee",
+      "email": "s@s.s",
+      "password": "1",
+      "nameCompany": "juancho Pizzas",
+      "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "nit": 1707740639383
+    },
+    {
+      "id": "6f6b",
+      "email": "ralexale@gmail.com",
+      "password": "123456",
+      "nameCompany": "a",
+      "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "nit": 1707742115017
+    },
+    {
+      "id": "d503",
+      "email": "velasquezcsj@gmail.com",
+      "password": "123456",
+      "nameCompany": "a",
+      "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+      "nit": 1707742750403
+    },
+    {
+      "id": "02c9",
+      "email": "h@f.co",
+      "nameCompany": "Familia",
+      "imageCompany": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.educima.com%2Fimagen-familia-i30254.html&psig=AOvVaw151MHu4Hix7lton1SzUPAC&ust=1707846030530000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPi-3rGspoQDFQAAAAAdAAAAABAE",
+      "nit": 1707759644802,
+      "password": "147852"
+    },
+    {
+      "id": "a425",
+      "email": "q@a.co",
+      "nameCompany": "a",
+      "imageCompany": "a",
+      "nit": 1707759723605,
+      "password": "123456"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "2034",
+      "title": "Sr Java",
+      "description": "1 o more year the experience",
+      "publicationDate": "2018",
+      "location": "MEdellin",
+      "experience": 1,
+      "modality": "Remote",
+      "salary": "200044000",
+      "companyId": "2034"
+    },
+    {
+      "id": "ad08",
+      "title": "java dev",
+      "experience": "10",
+      "salary": "1545456",
+      "location": "MEdellin",
+      "modality": "Remote",
+      "description": "assdasda",
+      "companyId": "6f6b",
+      "publicationDate": "2/12/2024"
+    },
+    {
+      "id": "26b3",
+      "title": "sr",
+      "experience": "22",
+      "salary": "2",
+      "location": "CAli",
+      "modality": "In person",
+      "description": "sadasddsa",
+      "companyId": "6f6b",
+      "publicationDate": "2/12/2024"
+    },
+    {
+      "id": "4d67",
+      "title": "asdsadsa",
+      "experience": "1",
+      "salary": "11",
+      "location": "sda",
+      "modality": "Remote",
+      "description": "dassaddas",
+      "companyId": "6f6b",
+      "publicationDate": "2/12/2024"
+    },
+    {
+      "id": "2e3b",
+      "title": "Devops",
+      "experience": "3",
+      "salary": "50000",
+      "location": "Bogota",
+      "modality": "Remote",
+      "description": "Example",
+      "companyId": "d503",
+      "publicationDate": "2/12/2024"
+    },
+    {
+      "id": "752b",
+      "title": "PowerBi",
+      "experience": "1",
+      "salary": "100001",
+      "location": "1",
+      "modality": "Remote",
+      "description": "1",
+      "companyId": "d503",
+      "publicationDate": "2/12/2024"
+    },
+    {
+      "id": "33f8",
+      "title": "Arquitecto",
+      "experience": "10",
+      "salary": "100000",
+      "location": "Pereira",
+      "modality": "In person",
+      "description": "hola",
+      "companyId": "2034",
+      "publicationDate": "2/12/2024"
+    }
+  ]
+}
