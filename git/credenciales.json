@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "cualidades": {
+        "cualidad1": "",
+        "cualidad2": "",
+        "cualidad3": ""
+      },
+      "casa": "",
+      "animalPatronus": "",
+      "clases": [
+        {
+          "profesor": " ",
+          "nombre": "",
+          "horario": "",
+          "propiedad": "",
+          "encantamiento": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": "",
+          "pocion": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": ""
+        },
+        {
+          "profesor": "",
+          "nombre": "",
+          "horario": "",
+          "propiedad": ""
+        }
+      ],
+      "nombre": "",
+      "edad": "",
+      "familia": "",
+      "linaje": ""
+    }
+  ]
+}
