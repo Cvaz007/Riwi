@@ -1,0 +1,70 @@
+*{
+    font-family: 'poppins',sans-serif;
+    /* para que midan el tamaño especificado, es decir no se le suman los bordes */
+    box-sizing: border-box;
+}
+body{
+    background: rgb(58, 56, 56);
+}
+/* .contenedor-tarjetas .tarjeta{
+    border: 10px solid #000;
+} */
+.titulo{
+    text-align: center;
+    color: rgb(119, 174, 223);
+    font-size: 28px;
+    text-shadow: 3px 1px 2px rgb(24, 66, 114);
+}
+.contenedor-tarjetas{
+    margin: 30px;
+    padding: 30px;
+    /* lo coloca uno al lado del otro y siempre va en el padre */
+    display: inline-flex;
+    
+}
+
+.contenedor-tarjetas .tarjeta .contenido-tarjeta span{
+    display: block;
+    color: rgb(255, 255, 255);
+}
+.contenedor-tarjetas .tarjeta{
+    box-shadow: 10px 10px 10px #be3de6;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: rgb(119, 174, 223);
+    width: max-content;
+    background: black;
+
+}
+
+.contenedor-tarjetas .tarjeta:first-child{
+    margin-right: 100px;
+}
+/* Seccion de flex-box */
+.contenedor-flex{
+    /*  este pone un espaciado entre cajas */
+    gap: 10px;
+    display: flex;
+    /*   */
+    justify-content: center;
+    /* para hacer que los contenedores bajen segun su  tamaño*/
+    flex-wrap: wrap;
+    /* Invierte el sentido (columnas este caso o fila) */
+
+}
+
+.contenedor-flex .item{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 10px solid #000;
+    display: flex;
+/*     para alinear de forma horizontal*/
+    justify-content: center;
+    /* para alineear de forma vertical */
+    align-items: center;
+
+}
+
+

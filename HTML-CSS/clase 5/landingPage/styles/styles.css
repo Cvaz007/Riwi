@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lato:ital,wght@0,700;0,900;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@200;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif,'Roboto';
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+body{
+    background: #CEEAF7;
+    color: #222;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 8%;
+}
+.header .logo {
+    font-size: 25px;
+    color: #222;
+    font-weight: 600;
+}
+.navbar a{
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+/* Esto se hace es con js, para poder activar y desactivar el boton
+.navbar a:hover, .navbar .active{
+    color: #0268f7;
+} */
+
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px; 
+    border: 2px solid #0268f7;
+    transform: rotate(45deg);
+}
+.social-media a i{
+    font-size: 24px;
+    color: #0268f7;
+    transform: rotate(-45deg);
+}
+.social-media a:hover{
+    border-radius: 100px;
+    transform: rotate(405deg);
+    transition: 2s;
+    background: #0268f7;
+}
+.social-media a:hover i{
+    color: #eaeaea;
+
+}
+
+/* Estilos de etiqueta principal */
+.home{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 80vh;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+
+}
+
+.home .home-content{
+    max-width: 630px;
+}
+
+.home .home-content h1{
+    font-size: 50px;  
+}
+
+.home .home-content h3{
+    font-size: 40px;  
+    color: #0268f7;
+}
+
+.home .home-content p{
+    font-size: 16px;  
+    margin: 15px 0 30px;
+}
+
+.home .home-content .btn{
+    padding: 10px 28px;
+    background: #0268f7;
+    border: 2px solid #0268f7;
+    border-radius: 6px;
+    color: #eaeaea;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 10px #eaeeae;
+    transition: 0.5s;
+}
+.home .home-content .btn:hover{
+    background: transparent;
+    color: #0268f7  ;
+}
+
+/* Estilos de imagenes */
+.home-img{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+    right: 7%;
+}
+.home-img .rom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #CEEAF7;
+    border: 25px solid #0268f7;
+    border-radius: 50px;
+}
+.home-img .rom img{
+    position: absolute;
+    max-width: 650px;
+    transform: rotate(-45deg);
+    top: 20px;
+    left: -177px;
+}
+
+.btn-wpp{
+    border-radius: 50%;
+    padding: 10px;
+    position: fixed;
+    right: 60px;
+    bottom: 40px;
+    background: #25D366;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-wpp:hover{
+    transform: scale(1.5);
+}
+.btn-wpp i{
+    font-size: 50px;
+    color: #FFF;
+}

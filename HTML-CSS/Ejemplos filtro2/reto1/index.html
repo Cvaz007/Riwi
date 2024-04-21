@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pages/css/navbar.css" />
+  <link rel="stylesheet" href="pages/css/pagina1.css" />
+  <link rel="stylesheet" href="pages/css/pagina2.css" />
+  <link rel="stylesheet" href="pages/css/pagina3.css" />
+  <link rel="stylesheet" href="pages/css/main.css" />
+  <link rel="stylesheet" href="pages/css/footer.css">
+  <link rel="shortcut icon" href="assets/imgs/balonLogo.png" type="image/x-icon" />
+  <title>La cancha informa</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-texto">
+      <a href="index.html">
+        <img class="logo" src="assets/imgs/balonLogo.png" alt="logo" />
+        <span class="texto">La cancha informa</span>
+      </a>
+    </div>
+
+    <!-- diseño responsivo -->
+    <label for="menu" class="nav-label">
+      <img src="assets/imgs/menu-regular-24.png" alt="menu" class="nav-img">
+    </label>
+    <input type="checkbox" id="menu" class="nav-input">
+
+    <nav class="navbar">
+      <a href="pages/es/ligas.html" class="item-nav">Ligas</a>
+      <a href="pages/es/futbolistas.html" class="item-nav">Futbolistas</a>
+      <a href="pages/es/sobreNosotros.html" class="item-nav">Sobre nosotros</a>
+    </nav>
+
+    <div class="idiomas">
+      <a href="index.html"><img class="espa" src="assets/imgs/espa.png" alt="español" /></a>
+      <a href="pages/en/indexEn.html"><img class="ing" src="assets/imgs/ingles.png" alt="ingles" /></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagina1">
+      <div class="izquierda">
+        <h2 class="texto-span">Amor,</h2>
+        <h2 class="texto-span">Fútbol y</h2>
+        <h2 class="texto-span">pasión</h2>
+        <div class="btns">
+          <a class="resultados" href="#resultados">Resultados</a>
+          <a class="partidos" href="#partidos">Partidos</a>
+        </div>
+      </div>
+      <div class="derecha">
+        <div class="rom">
+          <video src="assets/gifs.mp4" muted autoplay loop></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultados" class="pagina2">
+      <h2 class="titulo">Resultados</h2>
+      <div class='demo-container'>
+
+        <div class='carousel'>
+          <!-- Son los botones para pasar de pantalla -->
+          <input checked='checked' class='activator' id='carousel-slide-activator-1' name='carousel' type='radio'>
+          <input class='activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+          <input class='activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+
+          <!-- Son los controles de cada pantalla -->
+          <div class='controls'>
+            <label class='control control--forward' for='carousel-slide-activator-2'>&#8250;</label>
+          </div>
+
+          <div class='controls'>
+            <label class='control control--backward' for='carousel-slide-activator-1'>&#8249;</label>
+            <label class='control control--forward' for='carousel-slide-activator-3'>&#8250;</label>
+          </div>
+
+          <div class='controls'>
+            <label class='control control--backward' for='carousel-slide-activator-2'>&#8249;</label>
+          </div>
+
+          <!-- Es el contenedor del banner -->
+          <div class='screen'>
+
+            <!-- el foco donde van las cars -->
+            <div class='track'>
+
+              <!-- Son cada card -->
+              <div class='item item--mobile-in-1 item--tablet-in-2 item--desktop-in-3'>
+
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaColombia.png" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaBrazil.png" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaArgentina.png" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaBrazil.png" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaColombia.png" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaChile.png" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaMexico.jpg" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaUSA.jpg" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaUSA.jpg" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaBrazil.png" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaColombia.png" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaUSA.jpg" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tarjeta">
+                  <figure class="logos">
+                    <img class="bandera" src="assets/imgs/banderaChile.png" alt="Col" />
+                    <img class="bandera" src="assets/imgs/banderaBrazil.png" alt="Bra" />
+                  </figure>
+                  <div class="resultado">
+                    <span class="texto-tarjeta">0</span>
+                    <span class="texto-tarjeta">-</span>
+                    <span class="texto-tarjeta">1</span>
+                  </div>
+                  <div class="contenedor">
+                    <div class="contenido-titulos">
+                      <span class="texto-tarjeta">Rojas</span>
+                      <span class="texto-tarjeta">Amarrilas</span>
+                      <span class="texto-tarjeta">Tiros de esquina</span>
+                      <span class="texto-tarjeta">Tiros al arco</span>
+                    </div>
+                    <div class="contenido-resultado">
+                      <div class="Rojas">
+                        <span class="texto-tarjeta">0</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">0</span>
+                      </div>
+                      <div class="Amarrillas">
+                        <span class="texto-tarjeta">3</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                      <div class="esquina">
+                        <span class="texto-tarjeta">7</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">3</span>
+                      </div>
+                      <div class="arco">
+                        <span class="texto-tarjeta">21</span>
+                        <span class="texto-tarjeta">-</span>
+                        <span class="texto-tarjeta">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="partidos" class="pagina3">
+      <div class="contenedor">
+        <div class="arriba">
+          <a class="izquierda" href="">
+            <span class="texto-titulo">50,000+</span>
+            <span class="texto">Partidos retrasmitidos</span>
+          </a>
+
+          <a class="derecha" href="">
+            <img class="imagen-futbol" src="assets/imgs/psgArsenal.jpeg" alt="psgVSarsenal" />
+          </a>
+        </div>
+        <div class="abajo">
+          <a class="izquierda" href="">
+            <img class="imagen-futbol" src="assets/imgs/cityReal.jpeg" alt="cityVSreal" />
+          </a>
+          <a class="derecha" href="">
+            <span class="texto-titulo">100+</span>
+            <span class="texto">Partidos en vivo</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="iconos">
+      <img src="assets/imgs/bxl-facebook.svg" alt="facebook">
+      <img src="assets/imgs/bxl-instagram.svg" alt="instagram">
+      <img src="assets/imgs/bxl-linkedin.svg" alt="linkedin">
+    </div>
+    <div class="idiomas">
+      <a href=""><img class="espa" src="assets/imgs/espa.png" alt="español" /></a>
+      <a href=""><img class="ing" src="assets/imgs/ingles.png" alt="ingles" /></a>
+    </div>
+  </footer>
+</body>
+
+</html>

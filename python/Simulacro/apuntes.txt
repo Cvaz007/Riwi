@@ -1,0 +1,10 @@
+1. Se crea 3 listas, una para cada grupo A,B,cada
+1.1. En un diccionario se almacena cada trainer correspondiente a cada lista
+1.2. Para buscar los duplicados se busca por la llave id
+1.3. Se hace un pop segun la inasistencia del coder 
+1.4. Un simple for con enumerate
+1.5. Lo que hice en el todo, añadir y eliminar
+1.6. pues es llamar de nuevo la funcion 
+1.7. Hacer un if
+
+2.1 Son puros condicionales 

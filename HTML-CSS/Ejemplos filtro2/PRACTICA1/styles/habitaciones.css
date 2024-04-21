@@ -1,0 +1,93 @@
+:root{
+    --amarrillo:#FFCC28;
+    --celeste:#80D3DB;
+    --azul:#197DB1;
+    --cafe:#847059;
+    --negro:#000;
+    --blanco:#FFF;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    padding-bottom: 30px;
+}
+.contenedor-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.contenedor-cards .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 380px;
+    box-shadow: 2px 2px 2px 1px rgba(161, 161, 161, 0.2);
+}
+.img{
+    
+    background-repeat: no-repeat;
+    background-size: 380px 260px;
+    width: 380px;
+    height: 260px;
+}
+.img1{
+    background-image: url(/img/habitacion01.png);
+}
+.img2{
+    background-image: url(/img/habitacion02.png);
+}
+.img3{
+    background-image: url(/img/habitacion03.png);
+}
+.card .btn{
+    display: flex;
+    position: relative;
+    background: var(--cafe);
+    font-size: 30px;
+    padding: 1px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    left: 130px;
+    top: 190px;
+    color: #FFF;
+}
+.card .celeste{
+    background: var(--celeste);
+}
+.card .blue{
+    background: var(--azul);
+}
+.card .texto1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--negro);
+    color: var(--blanco);
+    width: 100%;
+    height: 60px;
+}
+.card .texto2{
+    background: rgb(249, 217, 104);
+    color: var(--negro);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+    align-items: center;
+}
+.card .detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dadada;
+}

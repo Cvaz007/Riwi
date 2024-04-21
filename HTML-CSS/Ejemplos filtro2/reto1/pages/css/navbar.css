@@ -1,0 +1,121 @@
+:root{
+    --verde-fondo:#246A24;
+    --negro:#000;
+    --blanco:#FFF;
+    --verde-oscuro:#258d19;
+    --verdoso:#009e00;
+    --fondo:#dad7cd;
+}
+
+.header a{
+    color: var(--blanco);
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: var(--negro);
+    width: 100%;
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 50px; 
+    padding-left: 2%;
+}
+.texto{
+    color: var(--blanco);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.logo-texto a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.idiomas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.idiomas a{
+    margin-left: 15px;  
+}
+.espa,.ing{
+    width: 30px;
+}
+
+/* animaciones */
+.header .navbar a::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: var(--verdoso);
+    transition: .5s all;  
+}
+
+.header .navbar a:hover::before{
+    width: 100%;
+}
+.header .item-nav:hover{
+    transform: scale(1.1);
+    font-weight: 600;
+}
+.header .espa:hover,.header .ing:hover,.header a:hover{
+    transform: scale(1.1);
+}
+
+/* diseño responsive */
+.nav-input, .nav-label{
+    display: none;
+}
+
+.navbar{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+    z-index: 1;
+}
+
+
+@media (max-width: 798px) {
+    .header .idiomas{
+        display: none;
+    }
+    .nav-label{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar{
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        background: var(--fondo);
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: .5s;
+        
+    }
+    .navbar a{
+        color: var(--negro);
+        font-weight: 650;
+    }
+    .nav-input:checked + .navbar{
+        clip-path: circle(100% at center);
+    }
+}

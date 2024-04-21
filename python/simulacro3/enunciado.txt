@@ -1,0 +1,35 @@
+Funcionalidades del modulo de mantenimiento de CODERS:
+1. Crear grupos A, B y C con coderss y sus datos personales(Nombre, Mes de Ingreso, Grupo y Edad).
+1.1. Registrar Trainer Del grupo A.
+1.2. Buscar Coders duplicados en 2 grupos.
+1.3 Eliminar coders por inasistencia. ---> AUTOMATICO
+1.4. Listar los Coders del grupo
+1.5. Traslado del coder de grupo (ej.:de C  a  B).
+1.6 Reportar los cODERS de mayor y menor edad de cada grupo.
+
+Nota: Repetir el menú de la imagen para los grupos restantes de b  y c.
+
+
+
+Funcionalidades del modulo para ceremonia de premiación:
+2.1. Monitor de clase: Coder con el mayor número de veces en que se 
+ha desempeñado como monitor de clase.
+2.2. Inasistencia: Coder con 0 inasistencia
+2.3.Coder con más entregas de talleres en Aula.
+2.4.Coder más colaborador.
+2.5. Coder con la mayor nota en Test de nivelación.
+2.6 Coder más participativo.
+2.8. Incluir función propia de libre elección..
+
+
+Nombre
+Ingreso (mes)
+edad
+grupo que pertenece
+inacistencias
+participaciones en clase
+participaciones como monitor
+numero de talleres realizados
+numero de colaboraciones de clase
+nota de test de nivelacion
+

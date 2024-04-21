@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    padding-bottom: 30px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.derecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.izquierda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 340px;
+}
+.izquierda img{
+    width: 340px;
+}
+.texto{
+    border-bottom: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+}
+.texto h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 16px 0;
+}
+.texto p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 19px 63px 19px;  
+}
+.bx-chevron-left{
+    position: relative;
+    left: -550px;
+    top: 250px;
+}
+.bx-chevron-right{
+    position: relative;
+    left: 550px;
+    top: 250px;
+}

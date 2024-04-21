@@ -1,0 +1,41 @@
+body{
+    height: 200vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 50%;
+    height: 50%;
+    background: aqua;
+    position: relative;
+}
+
+main .item{
+    height: 100px;
+    width: 100px;
+    background: red;
+    position: relative;
+    bottom: 20px;
+    right: -200px;
+}
+main .item2{
+    height: 100px;
+    width: 100px;
+    background: rgb(129, 241, 119);
+    position: relative;
+    top: 0px;
+    left: 20px;
+}
+
+/* 
+con relativo no sale del padre mientras que la absoluta se sale y se superpone 
+por ultimo la posicion fija es para que se quede quieto en ese lugar
+
+z-index es para poner atras o adelante 
+
+
+relativo al padre, los otros dos al que se le quiera poner
+*/

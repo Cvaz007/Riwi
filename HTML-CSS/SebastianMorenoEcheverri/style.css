@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #1b2026;
+  --secondary: #232a34;
+  --success: #fe2a31;
+  --light: #d2d3d7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* outline: 1px solid red; */
+}
+body {
+  min-height: 100vh;
+  background: var(--primary);
+}
+a {
+  text-decoration: none;
+}
+
+/* header */
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+.logo {
+  color: var(--light);
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo i{
+  color: var(--success);
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btn-search{
+  font-size: 20px;
+  color: var(--light);
+  font-weight: 500;
+}
+.sing-up{
+  font-size: 17px;
+  color: var(--light);
+  font-weight: 400;
+  background:var(--success);
+  border-radius: 5px;
+  padding: 3px 15px;
+}
+/* main */
+/* 1. Primera card, columna izquierda */
+main{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.izquierda{
+  width: 55%;
+  min-width: 50vw;
+  padding: 20px;
+}
+.izquierda .card-principal{
+  background: var(--secondary);
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+  /* falta las sombras */
+}
+.izquierda .cont-texto{
+  width: 65%;
+}
+.izquierda .cont-texto .text{
+  color: var(--light);
+  font-weight: bold;
+  font-size: 30px;
+  background: var(--success);
+  padding: 10px 7px;
+  border-radius: 5px;
+}
+.izquierda .cont-texto .titulo{
+  color: var(--light);
+  font-size: 43px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+.izquierda .cont-texto .titulo .rojo{
+  color: var(--success);
+}
+.izquierda .cont-texto p{
+  color: var(--light);
+  font-weight: 400;
+  max-width: 90%;
+}
+.izquierda .card-principal img{
+  width:200px;
+}
+
+/* cards de bonus */
+.izquierda .cont-cards-bonus{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.izquierda .cont-cards-bonus .card{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 290px;
+  height: 110px;
+  background: var(--secondary);
+  border-radius: 10px;
+  margin:10px 0;
+}
+.izquierda .cont-cards-bonus .card .cont-img{
+  width: 85px;
+  height: 85px;
+  background: var(--primary);
+  margin: 10px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.izquierda .cont-cards-bonus .card img{
+  width: 100%;
+}
+.izquierda .cont-cards-bonus .card .texto{
+  padding-right: 5px;
+}
+.izquierda .cont-cards-bonus .card .texto h3{
+  color: var(--light);
+  font-size: medium;
+}
+.izquierda .cont-cards-bonus .card .texto span{
+  color: #686c6f;;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* cards de new games */
+.izquierda .cont-new-games h2{
+  color: var(--light);
+  padding: 23px 0;
+}
+.izquierda .cont-new-games .cont-cards{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.izquierda .cont-new-games .cont-cards .new-game-card{
+  width: 150px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+.izquierda .cont-new-games .cont-cards .new-game-card:nth-child(1){
+  background-image: url(img/RDR2_HeroSquare_1080x1080.jpg);
+}
+.izquierda .cont-new-games .cont-cards .new-game-card:nth-child(2){
+  background-image: url(img/64b03f4807b24.jpeg);
+}
+.izquierda .cont-new-games .cont-cards .new-game-card:nth-child(3){
+  background-image: url(img/csgo-tournaments-esports-betting.jpg);
+}
+.izquierda .cont-new-games .cont-cards .new-game-card:nth-child(4){
+  background-image: url(img/DorkUnit.jpg);
+}
+.izquierda .cont-new-games .cont-cards .new-game-card:nth-child(5){
+  background-image: url(img/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.webp);
+}
+
+/* riwi points */
+.izquierda .points{
+  width: 100%;
+  margin-top: 120px;
+  background: var(--secondary);
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.izquierda .points .chica {
+  position: absolute;
+  right: 0;
+  bottom: -33px;
+  z-index: 1;
+  width: 100px;
+}
+.izquierda .points .contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--light);
+}
+.izquierda .points .contenedor .precio{
+  background-image: linear-gradient(-45deg,var(--success) 50%,rgb(233, 43, 49) 50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--light);
+  position: relative;
+  top: -40px;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+.izquierda .points .contenedor h3{
+  margin-top: 30px;
+  color: var(--light);
+  font-size: 25px;
+  position: absolute;
+  top: 40px;
+}
+.izquierda .points .contenedor .cont-jugadores{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 40px;
+}
+.izquierda .points .contenedor .cont-jugadores .card-back{
+  border-radius: 7px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px 0;
+}
+.izquierda .points .contenedor .cont-jugadores .card-back{
+  background: var(--primary);
+  width: 180px;
+  height: 180px;
+}
+.izquierda .points .contenedor .cont-jugadores .blue{
+  background: #08b69e;
+  background-image: linear-gradient(210deg, #1ecab3 10%, rgb(47, 93, 209) 90%);
+  width: 200px;
+  height: 200px;
+}
+.izquierda .points .contenedor .cont-jugadores .card-back .card{
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.izquierda .points .contenedor .cont-jugadores .blue .card{
+  border: 1px solid var(--light);
+  width: 180px;
+  height: 180px;
+}
+.izquierda .points .contenedor .cont-jugadores .black .card{
+  border: 1px solid var(--light);
+  width: 160px;
+  height: 160px;
+}
+.izquierda .points .contenedor .cont-jugadores .card-back .card img{
+  position: absolute;
+  top: 0;
+  width: 100px;
+  border-radius: 100%;
+  border: 5px solid var(--secondary);
+}
+.izquierda .points .contenedor .cont-jugadores .card-back .card h4{
+  color: var(--light);
+  font-weight: 800;
+  font-size: large;
+}
+.izquierda .points .contenedor .cont-jugadores .card-back .card p{
+  color: var(--light);
+  font-weight: 500;
+}
+
+/* Derecha */
+/* Puntaje jugadores */
+.derecha{
+  width: 43%;
+  min-width: 80vh;
+  padding: 20px;
+  background: var(--secondary);
+  border-radius: 10px;
+  margin: 20px 3px 20px 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+
+}
+.derecha .points{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 7px;
+}
+.derecha .points h2{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 7px;
+  color: var(--light);
+}
+.derecha .points .jugador{
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  padding: 0 15px;
+}
+.derecha .points .jugador .name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.derecha .points .jugador .name img{
+  width: 40px;
+  border-radius: 100%;
+}
+.derecha .points .jugador .name span{
+  color: var(--light);
+}
+.derecha .points .jugador .puntaje{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  font-weight: 700;
+}
+.derecha .points .jugador .red{
+  color: var(--success);
+}
+
+/* clanes */
+.derecha .cont-clans{
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  height: 350px;
+}
+.derecha .clans h2{
+  color: var(--light);
+  margin: 10px 20px;
+}
+.derecha .cont-clans .izquierda-clan{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 55%;
+  height:100%;
+}
+.derecha .cont-clans .izquierda-clan .clan{
+  height: 210px;
+  padding: 10px;
+}
+.derecha .cont-clans .clan img{
+  border-radius: 20px;
+}
+.derecha .cont-clans .izquierda-clan .clan img{
+  height: 100px;
+  width: 100%;
+}
+.derecha .cont-clans .izquierda-clan .clan .img-grande{
+  height: 200px;
+  width: 100%;
+}
+.derecha .cont-clans .clan span{
+  position: relative;
+  text-shadow: 1.5px 1.5px 1px var(--success);
+  color: var(--light);
+  font-size: 25px;
+  left: 20px;
+  bottom: 50px;
+}
+.derecha .cont-clans .derecha-clan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 6px;
+}
+.derecha .cont-clans .derecha-clan .arriba{
+  display: flex;
+  height: 150px;
+}
+.derecha .cont-clans .derecha-clan .arriba img{
+  height: 150px;
+  width: 100%;
+  padding: 10px 6px ;
+}
+.derecha .cont-clans .derecha-clan .abajo{
+  display: flex;
+  height: 110px;
+  width: 100%;
+}
+.derecha .cont-clans .derecha-clan .abajo img{
+  display: flex;
+  height: 170px;
+  width: 342px;
+  padding: 3px;
+}
+
+/* code now */
+.derecha .code-now h2{
+  color: var(--light);
+}
+.derecha .code-now .img{
+  width: 90%;
+  height: 90%;
+  position: relative;
+  right: -20px;
+}
+/* 
+diseño responsivo
+ */
+@media (max-width: 798px) {
+  /* responsive izquierda */
+  .izquierda {
+    width: 100%;
+  }
+  .izquierda .cont-texto {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .izquierda .card-principal img{
+    position: relative;
+    left: 65px;
+  }
+  .izquierda .cont-cards-bonus .card {
+    width: 100%;
+  }
+  .izquierda .points .chica {
+    width: 100px;
+  }
+  .izquierda .points .contenedor .precio {
+    font-size: 24px;
+    top: -30px;
+  }
+  .izquierda .points .contenedor h3 {
+    margin-top: 15px;
+  }
+  /* responsive derecha */
+  .derecha{
+    width: 95%;
+    min-width: 95%;
+  }
+  .derecha .cont-clans .izquierda-clan .clan .img-grande {
+    height: 180px;
+  }
+  .derecha .cont-clans .derecha-clan .quitar{
+    display: none;
+    
+  }
+  .derecha .cont-clans .derecha-clan .abajo img {
+    width: 160px;
+  }
+
+}
+
+

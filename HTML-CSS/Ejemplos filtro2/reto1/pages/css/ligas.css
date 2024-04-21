@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+/*NAVBAR*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded';
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: #DAD7CD;
+}
+
+/*ligas*/
+.contenedor_ligas{
+    display: flex;
+}
+.liga{
+    border: 5px solid green;
+}
+.texto_principal{
+    text-align: center;
+}
+table{
+    width: 400px;
+}
+.liga h2{
+    text-align: center;
+}
+/* Estilos generales */
+.contenedor_ligas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ajuste para pantallas más pequeñas */
+}
+
+.liga {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.liga:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de la tarjeta */
+.liga h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.liga img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos de la tabla */
+.liga table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.liga table td, .liga table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.liga table th {
+    background-color: #f2f2f2;
+}
+
+/* Animación del nombre de la liga */
+/* Animación del nombre de la liga */
+.liga .nombre {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    font-size: 1.5rem;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.liga:hover .nombre {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Añadimos una transición al contenedor de la liga */
+.liga {
+    margin: 40px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.liga:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ajuste de sombra al hacer hover */
+}
+
+
+/* Animación de la tabla */
+.liga .tabla {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.liga:hover .tabla {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Animaciones*/
+
+.texto_principal {
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .texto_principal:hover {
+    transform: scale(1.1);
+  }
+
+  .texto_principal {
+    animation: fadeIn 1s ease-out;
+  }
+
+  /*animacion a titulo*/
+.texto_principal{
+    background-color: #ccc;
+    background: linear-gradient(90deg, #00f048, #2b750d);
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/*animaciones footer*/
+/* Estilos generales del footer */
+/* Estilos generales del footer */
+footer {
+    background-color: black; /* Fondo verde */
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Estilos de las imágenes de los equipos en el footer */
+footer img {
+    width: 43px; /* Ajusta según el tamaño de tus imágenes */
+    margin-right: 18px; /* Espacio entre las imágenes */
+    display: inline-block;
+    animation: moverDerecha 20s linear infinite; /* Animación infinita de desplazamiento hacia la derecha */
+    border-radius: 50%; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    
+}
+
+/* Animación de desplazamiento hacia la derecha */
+@keyframes moverDerecha {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+/*responsive*/
+/* Consulta de medios para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1% 5%; /* Ajuste de relleno para pantallas más pequeñas */
+    }
+
+    .logo {
+        width: 40px; /* Ajuste de tamaño para pantallas más pequeñas */
+    }
+
+    .texto {
+        margin-left: 10px; /* Ajuste de margen para pantallas más pequeñas */
+    }
+
+    .navbar {
+        gap: 10px; /* Ajuste de espacio entre elementos para pantallas más pequeñas */
+    }
+
+    .idiomas a {
+        margin-left: 10px; /* Ajuste de margen para pantallas más pequeñas */
+    }
+
+    .contenedor_ligas {
+        gap: 10px; /* Ajuste de espacio entre elementos para pantallas más pequeñas */
+    }
+
+    .liga {
+        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+    }
+
+    .texto_principal {
+        padding: 5px; /* Ajuste de relleno para pantallas más pequeñas */
+    }
+
+    footer img {
+        margin-right: 5px; /* Ajuste para pantallas más pequeñas */
+    }
+}

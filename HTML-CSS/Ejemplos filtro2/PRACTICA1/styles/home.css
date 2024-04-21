@@ -1,0 +1,36 @@
+:root{
+    --amarrillo:#FFCC28;
+    --celeste:#80D3DB;
+    --azul:#197DB1;
+    --cafe:#847059;
+    --negro:#000;
+    --blanco:#FFF;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10%;
+    background:var(--blanco);
+}
+.logo img{
+   width: 35%;
+   margin: 10px;
+   display: flex;
+}
+.iconos{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.iconos i:hover{
+    color: var(--azul);
+}
+main{
+    width: 100%;
+    height: 90%;
+    background-image: url(../img/banner01.jpg);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+}
